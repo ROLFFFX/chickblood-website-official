@@ -5,14 +5,31 @@ import HideableDrawer from "../../utils/HideableDrawer";
 
 export default function MemberPage() {
   return (
-    <div style={{ height: "100vh" }}>
+    <Box
+      sx={{
+        height: "100vh",
+        width: "100vw",
+      }}
+    >
       <Box
         position="absolute"
         sx={{ marginLeft: "1%", marginTop: "1%", zIndex: 1000 }}
       >
         <HideableDrawer />
       </Box>
-      <MemberCarousel></MemberCarousel>
-    </div>
+      <Box
+        sx={{
+          height: "100vh",
+          width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box sx={{ height: "60vw", width: "100vw", overflow: "hidden" }}>
+          <MemberCarousel></MemberCarousel>
+        </Box>
+      </Box>
+    </Box>
   );
 }
