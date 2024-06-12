@@ -136,7 +136,11 @@ export default function HideableDrawer() {
           </AnimatedListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <AnimatedListItemButton>
+          <AnimatedListItemButton
+            onClick={() => {
+              navigate("/member");
+            }}
+          >
             <AnimatedListItemText
               primary={t("member")}
               sx={ListItemTextStyle}

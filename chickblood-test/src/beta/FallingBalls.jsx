@@ -5,7 +5,7 @@ import CustomCursor from "../utils/CustomCursor";
 const FallingBalls = () => {
   const sceneRef = useRef(null);
   const { width, height } = useWindowSize();
-  const [ball, setBall] = useState(null);
+  // const [ball, setBall] = useState(null);
 
   useEffect(() => {
     const engine = Matter.Engine.create();
@@ -21,7 +21,7 @@ const FallingBalls = () => {
     });
 
     const ball = Matter.Bodies.circle(0, 100, 100, { restitution: 0.8 });
-    setBall(ball);
+    // setBall(ball);
 
     const roof = Matter.Bodies.rectangle(width / 2, 0, width, 1, {
       isStatic: true,
@@ -62,7 +62,7 @@ const FallingBalls = () => {
         mouseY > bounds.min.y &&
         mouseY < bounds.max.y
       ) {
-        alert("Ball clicked!");
+        // alert("Ball clicked!");
       }
     });
 
