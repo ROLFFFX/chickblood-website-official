@@ -26,8 +26,8 @@ const FallingBalls = () => {
         fillStyle: "#8ecae6",
         sprite: {
           // texture: "pics/icons/blog_icon.png",
-          // xScale: 0.06,
-          // yScale: 0.06,
+          xScale: 0.06,
+          yScale: 0.06,
         },
       },
     });

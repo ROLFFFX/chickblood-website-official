@@ -7,6 +7,7 @@ export default function CustomCursor({ size = 128 }) {
   const [isVisible, setIsVisible] = React.useState(true);
   const positionRef = useRef({ x: 0, y: 0 });
   const cursorRef = useRef(null);
+  const audioRef = useRef(null);
 
   const updateCursorPos = (x, y) => {
     if (cursorRef.current) {
@@ -47,12 +48,19 @@ export default function CustomCursor({ size = 128 }) {
       setIsVisible(false);
     };
 
+    const handleMouseClick = () => {
+      if (audioRef.current) {
+        audioRef.current.play();
+      }
+    };
+
     document.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("scroll", handleScroll, true);
     document.addEventListener("mouseover", handleMouseOver);
     document.addEventListener("mouseout", handleMouseOut);
     document.addEventListener("mouseleave", handleMouseLeave);
     window.addEventListener("blur", handleWindowBlur);
+    document.addEventListener("click", handleMouseClick);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
@@ -61,6 +69,7 @@ export default function CustomCursor({ size = 128 }) {
       document.removeEventListener("mouseout", handleMouseOut);
       document.removeEventListener("mouseleave", handleMouseLeave);
       window.removeEventListener("blur", handleWindowBlur);
+      document.removeEventListener("click", handleMouseClick);
     };
   }, []);
 
@@ -88,6 +97,7 @@ export default function CustomCursor({ size = 128 }) {
           }}
         />
       )}
+      <audio ref={audioRef} src="/sound/mouseClick.wav" preload="auto" />
     </div>
   );
 }

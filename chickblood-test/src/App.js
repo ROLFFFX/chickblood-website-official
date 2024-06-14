@@ -12,6 +12,7 @@ import Blog from "./components/blog/Blog";
 import Issue1 from "./components/blog/issues/Issue1";
 import FallingTest from "./beta/FallingTest";
 import MemberPage from "./components/member/MemberPage";
+import ContactPage from "./components/contact/ContactPage";
 
 function Layout({ children }) {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/story" element={<Story />} />
             <Route path="/member" element={<MemberPage />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Route>
           <Route path="/playground" element={<Playground />} />
           <Route path="/falling" element={<FallingTest />} />

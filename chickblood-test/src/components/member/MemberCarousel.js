@@ -41,19 +41,63 @@ function Rig(props) {
   return <group ref={ref} {...props} />;
 }
 
-function Carousel({ radius = 1.4, count = 6 }) {
-  return Array.from({ length: count }, (_, i) => (
-    <Card
-      key={i}
-      url={`pics/cbicon_red.png`}
-      position={[
-        Math.sin((i / count) * Math.PI * 2) * radius,
-        0,
-        Math.cos((i / count) * Math.PI * 2) * radius,
-      ]}
-      rotation={[0, Math.PI + (i / count) * Math.PI * 2, 0]}
-    />
-  ));
+function Carousel({ radius = 1.4 }) {
+  return (
+    <>
+      <Card
+        key={0}
+        url="pics/cbicon_red.png"
+        position={[Math.sin(0) * radius, 0, Math.cos(0) * radius]}
+        rotation={[0, Math.PI, 0]}
+      />
+      <Card
+        key={1}
+        url="pics/cbicon_red.png"
+        position={[
+          Math.sin(Math.PI / 3) * radius,
+          0,
+          Math.cos(Math.PI / 3) * radius,
+        ]}
+        rotation={[0, Math.PI + Math.PI / 3, 0]}
+      />
+      <Card
+        key={2}
+        url="pics/cbicon_red.png"
+        position={[
+          Math.sin((2 * Math.PI) / 3) * radius,
+          0,
+          Math.cos((2 * Math.PI) / 3) * radius,
+        ]}
+        rotation={[0, Math.PI + (2 * Math.PI) / 3, 0]}
+      />
+      <Card
+        key={3}
+        url="pics/cbicon_red.png"
+        position={[Math.sin(Math.PI) * radius, 0, Math.cos(Math.PI) * radius]}
+        rotation={[0, Math.PI + Math.PI, 0]}
+      />
+      <Card
+        key={4}
+        url="pics/cbicon_red.png"
+        position={[
+          Math.sin((4 * Math.PI) / 3) * radius,
+          0,
+          Math.cos((4 * Math.PI) / 3) * radius,
+        ]}
+        rotation={[0, Math.PI + (4 * Math.PI) / 3, 0]}
+      />
+      <Card
+        key={5}
+        url="pics/cbicon_red.png"
+        position={[
+          Math.sin((5 * Math.PI) / 3) * radius,
+          0,
+          Math.cos((5 * Math.PI) / 3) * radius,
+        ]}
+        rotation={[0, Math.PI + (5 * Math.PI) / 3, 0]}
+      />
+    </>
+  );
 }
 
 function Card({ url, ...props }) {
