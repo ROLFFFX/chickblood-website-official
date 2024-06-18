@@ -23,6 +23,9 @@ i18n
       chn: {
         translation: TRANSLATION_CHN,
       },
+      zh: {
+        translation: TRANSLATION_CHN,
+      },
       krn: {
         translation: TRANSLATION_KRN,
       },

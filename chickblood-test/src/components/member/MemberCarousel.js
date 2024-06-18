@@ -35,8 +35,8 @@ function Rig(props) {
       [-state.pointer.x * 2, state.pointer.y + 1.5, 10],
       0.3,
       delta
-    ); // Move camera
-    state.camera.lookAt(0, 0, 0); // Look at center
+    );
+    state.camera.lookAt(0, 0, 0);
   });
   return <group ref={ref} {...props} />;
 }
