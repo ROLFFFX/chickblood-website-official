@@ -21,6 +21,11 @@ const useFontFamily = () => {
           light: "xsong",
           bold: "DHeiFanTi",
         };
+      case "zh":
+        return {
+          light: "xsong",
+          bold: "DHeiFanTi",
+        };
       case "jpn":
         return {
           light: "Hiragiro-Mincho-Pro-W3",

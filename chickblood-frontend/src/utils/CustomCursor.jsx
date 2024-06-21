@@ -1,11 +1,11 @@
 import { throttle } from "lodash";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../App.css";
 
 export default function CustomCursor({ size = 128 }) {
-  const [isHoveringClickable, setIsHoveringClickable] = React.useState(false);
-  const [isVisible, setIsVisible] = React.useState(true);
-  const positionRef = useRef({ x: 0, y: 0 });
+  const [isHoveringClickable, setIsHoveringClickable] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const positionRef = useRef(null);
   const cursorRef = useRef(null);
   const audioRef = useRef(null);
 
@@ -42,10 +42,14 @@ export default function CustomCursor({ size = 128 }) {
 
     const handleMouseLeave = () => {
       setIsVisible(false);
+      positionRef.current = { x: -size, y: -size };
+      updateCursorPos(positionRef.current.x, positionRef.current.y);
     };
 
     const handleWindowBlur = () => {
       setIsVisible(false);
+      positionRef.current = { x: -size, y: -size };
+      updateCursorPos(positionRef.current.x, positionRef.current.y);
     };
 
     const handleMouseClick = () => {
@@ -55,23 +59,23 @@ export default function CustomCursor({ size = 128 }) {
     };
 
     document.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll, true);
     document.addEventListener("mouseover", handleMouseOver);
     document.addEventListener("mouseout", handleMouseOut);
     document.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("scroll", handleScroll, true);
     window.addEventListener("blur", handleWindowBlur);
     document.addEventListener("click", handleMouseClick);
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mouseover", handleMouseOver);
       document.removeEventListener("mouseout", handleMouseOut);
       document.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("blur", handleWindowBlur);
       document.removeEventListener("click", handleMouseClick);
     };
-  }, []);
+  }, [size]);
 
   return (
     <div
@@ -90,14 +94,14 @@ export default function CustomCursor({ size = 128 }) {
           style={{
             position: "absolute",
             pointerEvents: "none",
-            transform: "translate(-50%, -40%)",
+            transform: "translate(-50%, -50%)",
             zIndex: 1400,
             width: `${size}px`,
             height: `${size}px`,
           }}
         />
       )}
-      <audio ref={audioRef} src="/sound/mouseClick.wav" preload="auto" />
+      <audio ref={audioRef} src="/sound/mouseClick4.mp3" preload="auto" />
     </div>
   );
 }
