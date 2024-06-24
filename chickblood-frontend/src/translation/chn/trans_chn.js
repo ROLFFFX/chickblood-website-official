@@ -33,4 +33,10 @@ export const TRANSLATION_CHN = {
   dummycontent3: "索引3内容",
   backtoblog: "返回博客",
   linkcopied: "链接已复制到剪贴板",
+  // contact page - email
+  sendusemail: "给我们发送电子邮件",
+  yourname: "你的名字",
+  youremail: "你的邮箱",
+  emailTitle: "邮件标题",
+  emailMessage: "邮件内容",
 };

@@ -33,4 +33,10 @@ export const TRANSLATION_KRN = {
   dummycontent3: "인덱스 3 내용",
   backtoblog: "블로그로돌아가기",
   linkcopied: "링크가 클립보드에 복사되었습니다",
+  // contact page - email
+  sendusemail: "이메일 보내기",
+  yourname: "이름",
+  youremail: "이메일",
+  emailTitle: "이메일 제목",
+  emailMessage: "메시지",
 };

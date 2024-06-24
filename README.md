@@ -61,6 +61,13 @@ palette:{
     },
 }
 ```
+##### Accessing current light/dark theme
+```
+import { ThemeContext } from "../../../context/ThemeProvider";
+...
+const { themeMode } = useContext(ThemeContext);
+console.log(themeMode);
+```
 
 ### Language, Typography & Font
 #### Language (i18next)

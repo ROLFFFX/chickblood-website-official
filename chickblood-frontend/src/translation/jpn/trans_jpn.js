@@ -33,4 +33,10 @@ export const TRANSLATION_JPN = {
   dummycontent3: "インデックス 3 の内容",
   backtoblog: "ブログに戻る",
   linkcopied: "リンクがクリップボードにコピーされました",
+  // contact page - email
+  sendusemail: "メールを送る",
+  yourname: "あなたの名前",
+  youremail: "あなたのメール",
+  emailTitle: "メールの件名",
+  emailMessage: "メッセージ",
 };

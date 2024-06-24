@@ -1,6 +1,7 @@
 import { throttle } from "lodash";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import "../App.css";
+import { ThemeContext } from "../context/ThemeProvider";
 
 export default function CustomCursor({ size = 128 }) {
   const [isHoveringClickable, setIsHoveringClickable] = useState(false);
@@ -8,6 +9,7 @@ export default function CustomCursor({ size = 128 }) {
   const positionRef = useRef(null);
   const cursorRef = useRef(null);
   const audioRef = useRef(null);
+  const { themeMode } = useContext(ThemeContext);
 
   const updateCursorPos = (x, y) => {
     if (cursorRef.current) {
@@ -77,6 +79,27 @@ export default function CustomCursor({ size = 128 }) {
     };
   }, [size]);
 
+  function imageSource(isHoveringClickable, themeMode) {
+    const images = {
+      light: {
+        clickable:
+          "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/6c2f2546-6e4b-4ca6-a5bc-b4630c953900/public",
+        default:
+          "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/07e065d3-01ba-41e1-f323-baa66d10ba00/public",
+      },
+      dark: {
+        clickable:
+          "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/2ff5d55e-6996-4d7d-665e-a56df835fd00/public",
+        default:
+          "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/b02a5789-25e1-4897-d127-c2fb816c3300/public",
+      },
+    };
+    const mode = themeMode === "light" ? "light" : "dark";
+    const cursorType = isHoveringClickable ? "clickable" : "default";
+
+    return images[mode][cursorType];
+  }
+
   return (
     <div
       className="custom-cursor-container"
@@ -85,16 +108,12 @@ export default function CustomCursor({ size = 128 }) {
       {isVisible && (
         <img
           ref={cursorRef}
-          src={
-            isHoveringClickable
-              ? "/pics/cursors/custom-cursor-ms2.png"
-              : "/pics/cursors/custom-cursor-ms1.png"
-          }
+          src={imageSource(isHoveringClickable, themeMode)}
           alt="Custom Cursor"
           style={{
             position: "absolute",
             pointerEvents: "none",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-50%, -40%)",
             zIndex: 1400,
             width: `${size}px`,
             height: `${size}px`,

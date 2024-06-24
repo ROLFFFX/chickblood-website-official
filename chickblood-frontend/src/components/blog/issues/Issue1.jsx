@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import useColorPalette from "../../../hooks/useColorPalette";
 import useFontFamily from "../../../hooks/useFontFamily";
@@ -22,6 +22,7 @@ import BlogBackBTN from "../../../utils/BlogBackBTN";
 import CustomCursor from "../../../utils/CustomCursor";
 import LanguageBTN from "../../../utils/LanguageBTN";
 import ShareBTN from "../../../utils/ShareBTN";
+import { ThemeContext } from "../../../context/ThemeProvider";
 
 export default function Issue1() {
   /** inFrame state detects if mouse is in iframe.  */
@@ -32,6 +33,7 @@ export default function Issue1() {
   const handleMouseLeave = () => {
     setInIframe(false);
   };
+
   return (
     <Box>
       <Grid
@@ -113,6 +115,7 @@ function IndexDrawer() {
   const { t } = useTranslation();
   const useFont = useFontFamily();
   const [content, setContent] = useState(1);
+  const { themeMode } = useContext(ThemeContext);
   /**
    * ListItemText Styles. Defines the FontSize/Family and Motion of List Item Texts.
    **/
@@ -157,11 +160,20 @@ function IndexDrawer() {
           <DrawerHeader>
             {open ? (
               <Box mt={-3}>
-                <img
-                  src="/pics/icons/blog_icon.png"
-                  alt="blog icon"
-                  style={{ width: "240px", height: "240px" }}
-                ></img>
+                {themeMode === "light" ? (
+                  <img
+                    src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/96d5ae81-cfb3-4e45-5687-ae04972f8800/public"
+                    alt="blog icon"
+                    style={{ width: "240px", height: "240px" }}
+                  ></img>
+                ) : (
+                  <img
+                    src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/e491435d-a7a5-46da-b674-58791dc9d300/public"
+                    alt="blog icon"
+                    style={{ width: "240px", height: "240px" }}
+                  ></img>
+                )}
+
                 <Box p={1} mt={-4}>
                   <Button
                     onClick={handleDrawerToggle}

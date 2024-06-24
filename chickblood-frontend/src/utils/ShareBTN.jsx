@@ -12,6 +12,7 @@ import useColorPalette from "../hooks/useColorPalette";
 import useFontFamily from "../hooks/useFontFamily";
 import { IoMdShare } from "react-icons/io";
 import { useTranslation } from "react-i18next";
+import { FaSquareThreads } from "react-icons/fa6";
 
 const ShareBTN = ({ url, title }) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -39,6 +40,12 @@ const ShareBTN = ({ url, title }) => {
       return;
     }
     setOpenSnackbar(false);
+  };
+
+  const shareToThreads = () => {
+    const threadShareUrl = `https://threads.net/intent/post?text=${title} ${url}
+`;
+    window.open(threadShareUrl, "_blank");
   };
 
   return (
@@ -104,12 +111,29 @@ const ShareBTN = ({ url, title }) => {
             </TwitterShareButton>
           </Box>
         </MenuItem>
-        {/* <MenuItem onClick={handleClose}>
-          <FacebookShareButton url={url} quote={title}>
-            <FacebookIcon size={32} round />
-            <Typography sx={{ ml: 1 }}>Facebook</Typography>
-          </FacebookShareButton>
-        </MenuItem> */}
+        {/* Threads */}
+        <MenuItem
+          onClick={shareToThreads}
+          disableRipple
+          style={{ cursor: "none" }}
+        >
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            ml={-1}
+          >
+            <FaSquareThreads size={25} />
+            <Typography sx={{ ml: 2, fontFamily: useFont.bold, fontSize: 13 }}>
+              Threads
+            </Typography>
+          </Box>
+        </MenuItem>
+
+        {/* Copy Link */}
         <MenuItem
           onClick={handleCopyLink}
           disableRipple
