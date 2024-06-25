@@ -39,4 +39,8 @@ export const TRANSLATION_CHN = {
   youremail: "你的邮箱",
   emailTitle: "邮件标题",
   emailMessage: "邮件内容",
+  contactTitle: "联系",
+  iconDesigner: "图标设计师",
+  artDirector: "艺术总监",
+  webDev: '网页开发'
 };

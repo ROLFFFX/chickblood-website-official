@@ -39,4 +39,8 @@ export const TRANSLATION_KRN = {
   youremail: "이메일",
   emailTitle: "이메일 제목",
   emailMessage: "메시지",
+  contactTitle: "연락처",
+  iconDesigner: "아이콘디자이너",
+  artDirector: "아트디렉터",
+  webdev: "웹개발자",
 };

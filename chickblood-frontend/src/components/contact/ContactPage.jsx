@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Box, Divider, Grid } from "@mui/material";
 import HideableDrawer from "../../utils/HideableDrawer";
 import EmailSender from "./EmailSender";
 import SocialMediaLinks from "./SocialMediaLinks";
+import { ThemeContext } from "../../context/ThemeProvider";
 
 export default function ContactPage() {
+  const { themeMode } = useContext(ThemeContext);
   return (
     <Box style={{ height: "100vh" }}>
       <Box
@@ -42,7 +44,7 @@ export default function ContactPage() {
           position: "absolute",
           left: "50%",
           top: "5%",
-          bgcolor: "#000000",
+          bgcolor: themeMode === "light" ? "#000000" : "#FFFFFF",
         }}
       />
     </Box>

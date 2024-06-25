@@ -154,7 +154,7 @@ export default function HideableDrawer() {
       </List>
       <Divider sx={{ mt: 1 }} />
       <List>
-        <ListItem disablePadding>
+        {/* <ListItem disablePadding>
           <AnimatedListItemButton
             onClick={() => {
               navigate("/playground");
@@ -165,7 +165,7 @@ export default function HideableDrawer() {
               sx={ListItemTextStyle}
             />
           </AnimatedListItemButton>
-        </ListItem>
+        </ListItem> */}
       </List>
       <Box style={{ flexGrow: 1 }} />
       <Box

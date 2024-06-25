@@ -42,4 +42,8 @@ export const TRANSLATION_EN = {
   youremail: "Your Email",
   emailTitle: "Email Title",
   emailMessage: "Message",
+  contactTitle: "Contact",
+  iconDesigner: "Icon Designer",
+  artDirector: "Art Director",
+  webdev: "Web Dev",
 };

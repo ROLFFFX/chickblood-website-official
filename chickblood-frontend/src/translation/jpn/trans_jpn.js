@@ -39,4 +39,8 @@ export const TRANSLATION_JPN = {
   youremail: "あなたのメール",
   emailTitle: "メールの件名",
   emailMessage: "メッセージ",
+  contactTitle: "連絡先",
+  iconDesigner: "Icon Designer",
+  artDirector: "Art Director",
+  webdev: "ウェブ開発者",
 };

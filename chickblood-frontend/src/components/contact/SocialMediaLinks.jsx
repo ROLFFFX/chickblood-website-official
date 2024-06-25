@@ -1,10 +1,13 @@
 import Matter from "matter-js";
-import { React, useEffect, useRef, useState } from "react";
+import { React, useContext, useEffect, useRef, useState } from "react";
+import { ThemeContext } from "../../context/ThemeProvider";
+import { Box, Typography } from "@mui/material";
+import useFontFamily from "../../hooks/useFontFamily";
+import { useTranslation } from "react-i18next";
 
 export default function SocialMediaLinks() {
   const sceneRef = useRef(null);
   const { width, height } = useWindowSize();
-
   useEffect(() => {
     // Module aliases
     const Engine = Matter.Engine,
@@ -63,12 +66,151 @@ export default function SocialMediaLinks() {
       },
     });
 
-    // Create ball
-    const ball = Bodies.circle(width / 2 - 1, 100, 60, {
+    // clickable balls ------------------------------------
+    // Create tiktok ball
+    // const tiktok = Bodies.circle(width / 2 - 1, 100, 50, {
+    //   restitution: 0.7,
+    //   density: 0.5,
+    //   render: {
+    //     sprite: {
+    //       texture: "/pics/icons/tiktok-icon.png",
+    //       xScale: 0.2,
+    //       yScale: 0.2,
+    //     },
+    //   },
+    // });
+    // // Create youtube ball
+    // const youtube = Bodies.circle(width / 2 - 1, 100, 50, {
+    //   restitution: 0.7,
+    //   density: 0.5,
+    //   render: {
+    //     sprite: {
+    //       texture: "/pics/icons/youtube-icon.webp",
+    //       xScale: 0.1,
+    //       yScale: 0.1,
+    //     },
+    //   },
+    // });
+    // // Create insta ball
+    // const insta = Bodies.circle(width / 2 - 1, 100, 50, {
+    //   restitution: 0.7,
+    //   density: 0.5,
+    //   render: {
+    //     sprite: {
+    //       texture: "/pics/icons/insta-icon.png",
+    //       xScale: 0.1,
+    //       yScale: 0.1,
+    //     },
+    //   },
+    // });
+    // // Create xhs ball
+    // const xhs = Bodies.circle(width / 2 - 1, 100, 50, {
+    //   restitution: 0.7,
+    //   density: 0.5,
+    //   render: {
+    //     sprite: {
+    //       texture: "/pics/icons/xhs-icon.webp",
+    //       xScale: 0.2,
+    //       yScale: 0.2,
+    //     },
+    //   },
+    // });
+    // // Create twitter ball
+    // const twitter = Bodies.circle(width / 2 - 1, 100, 50, {
+    //   restitution: 0.7,
+    //   density: 0.5,
+    //   render: {
+    //     sprite: {
+    //       texture: "/pics/icons/x-icon.webp",
+    //       xScale: 0.2,
+    //       yScale: 0.2,
+    //     },
+    //   },
+    // });
+    // // Create discord ball
+    // const discord = Bodies.circle(width / 2 - 1, 100, 50, {
+    //   restitution: 0.7,
+    //   density: 0.5,
+    //   render: {
+    //     sprite: {
+    //       texture: "/pics/icons/discord-icon.webp",
+    //       xScale: 0.1,
+    //       yScale: 0.1,
+    //     },
+    //   },
+    // });
+    // end clickable balls --------------------------------
+
+    // clickable rectangles --------------------------------
+    const tiktok = Bodies.rectangle(width / 2 - 1, 0, 100, 100, {
       restitution: 0.7,
       density: 0.5,
-      render: { fillStyle: "#ff5722" },
+      render: {
+        sprite: {
+          texture: "/pics/icons/media-icons/tiktok.webp",
+          xScale: 0.2,
+          yScale: 0.2,
+        },
+      },
     });
+
+    const insta = Bodies.rectangle(width / 2 - 1, 0, 100, 100, {
+      restitution: 0.7,
+      density: 0.5,
+      render: {
+        sprite: {
+          texture: "/pics/icons/media-icons/instagram.webp",
+          xScale: 0.2,
+          yScale: 0.2,
+        },
+      },
+    });
+
+    const youtube = Bodies.rectangle(width / 2 - 1, 0, 100, 100, {
+      restitution: 0.7,
+      density: 0.5,
+      render: {
+        sprite: {
+          texture: "/pics/icons/media-icons/youtube.webp",
+          xScale: 0.2,
+          yScale: 0.2,
+        },
+      },
+    });
+    const twitter = Bodies.rectangle(width / 2 - 1, 0, 100, 100, {
+      restitution: 0.7,
+      density: 0.5,
+      render: {
+        sprite: {
+          texture: "/pics/icons/media-icons/twitter.webp",
+          xScale: 0.2,
+          yScale: 0.2,
+        },
+      },
+    });
+    const discord = Bodies.rectangle(width / 2 - 1, 0, 100, 100, {
+      restitution: 0.7,
+      density: 0.5,
+      render: {
+        sprite: {
+          texture: "/pics/icons/media-icons/discord.webp",
+          xScale: 0.2,
+          yScale: 0.2,
+        },
+      },
+    });
+    const xhs = Bodies.rectangle(width / 2 - 1, 0, 100, 100, {
+      restitution: 0.7,
+      density: 0.5,
+      render: {
+        sprite: {
+          texture: "/pics/icons/media-icons/xhs.webp",
+          xScale: 0.2,
+          yScale: 0.2,
+        },
+      },
+    });
+    // end clickable rectangles ----------------------------
 
     // credit section - semicircle
     const creditSection = Matter.Bodies.circle(
@@ -89,10 +231,11 @@ export default function SocialMediaLinks() {
       leftWall,
       rightWall,
       roof,
-      ball,
       contactIcon,
       creditSection,
     ]);
+
+    World.add(engine.world, [tiktok, insta, youtube, twitter, discord, xhs]);
 
     const mouse = Matter.Mouse.create(render.canvas);
     const mouseConstraint = Matter.MouseConstraint.create(engine, {
@@ -153,31 +296,166 @@ function useWindowSize() {
 }
 
 const CreditBox = () => {
+  const { themeMode } = useContext(ThemeContext);
+  const useFont = useFontFamily();
+  const { height } = useWindowSize();
+  const { t } = useTranslation();
   const style = {
     position: "absolute",
     top: "50%",
     left: "100%",
     width: "50vh",
     height: "50vh",
-    border: "0.4px solid black",
+    border: themeMode === "light" ? "0.4px solid black" : "0.4px solid white",
     borderRadius: "50%",
     transform: "translate(-50%, -50%)",
     zIndex: -1,
   };
+  function getFontSize(height) {
+    if (height < 350) {
+      return "5px";
+    } else if (height < 450) {
+      return "8px";
+    } else if (height < 500) {
+      return "12px";
+    } else if (height < 650) {
+      return "15px";
+    }
+    return "18px";
+  }
 
-  return <div style={style}></div>;
+  return (
+    <div style={style}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "50%",
+          marginLeft: "5%",
+          height: "100%",
+          flexDirection: "column",
+        }}
+      >
+        <br></br>
+        <Typography
+          sx={{
+            whiteSpace: "pre-line",
+            fontFamily: useFont.bold,
+            fontSize: getFontSize(height),
+          }}
+        >
+          {t("artDirector")}
+        </Typography>
+        <Typography
+          sx={{
+            whiteSpace: "pre-line",
+            fontFamily: useFont.bold,
+            fontSize: getFontSize(height),
+          }}
+        >
+          Chzaza
+        </Typography>
+        <br></br>
+        <Typography
+          sx={{
+            whiteSpace: "pre-line",
+            fontFamily: useFont.bold,
+            fontSize: getFontSize(height),
+          }}
+        >
+          {t("iconDesigner")}
+        </Typography>
+        <Typography
+          sx={{
+            whiteSpace: "pre-line",
+            fontFamily: useFont.bold,
+            fontSize: getFontSize(height),
+          }}
+        >
+          Rita
+        </Typography>
+        <br></br>
+        <Typography
+          sx={{
+            whiteSpace: "pre-line",
+            fontFamily: useFont.bold,
+            fontSize: getFontSize(height),
+          }}
+        >
+          {t("webdev")}
+        </Typography>
+        <Typography
+          sx={{
+            whiteSpace: "pre-line",
+            fontFamily: useFont.bold,
+            fontSize: getFontSize(height),
+          }}
+        >
+          ROLF
+        </Typography>
+      </Box>
+    </div>
+  );
 };
 
+// Contact Section - Bottom Left Corner
 const ContactIconBox = () => {
+  const { themeMode } = useContext(ThemeContext);
+  const useFont = useFontFamily();
+  const { height } = useWindowSize();
+  const { t } = useTranslation();
   const style = {
     width: "50.5vh",
     height: "50.5vh",
     position: "absolute",
     bottom: "0",
-    left: "0",
+    left: "-1px",
     borderTopRightRadius: "50.5vh",
-    border: "0.4px solid black",
+    border: themeMode === "light" ? "0.4px solid black" : "0.4px solid white",
+    backgroundColor: themeMode === "light" ? "#FFFFFF" : "#222222",
   };
-
-  return <div style={style}></div>;
+  function getImgSource(themeMode) {
+    return themeMode === "light"
+      ? "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/a892f4ab-5495-42ad-1efa-441c10677c00/public"
+      : "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/aadf372c-9f3f-497d-89bc-163a31e4dd00/public";
+  }
+  function getFontSize(height) {
+    if (height < 500) {
+      return "20px";
+    } else if (height < 600) {
+      return "30px";
+    }
+    return "35px";
+  }
+  return (
+    <div style={style}>
+      <Box
+        sx={{
+          height: "60%",
+          width: "60%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Typography
+          sx={{ fontFamily: useFont.bold, fontSize: getFontSize(height) }}
+        >
+          {t("contactTitle")}
+        </Typography>
+      </Box>
+      <img
+        src={getImgSource(themeMode)}
+        alt="blog icon"
+        style={{
+          width: "40vh",
+          height: "40vh",
+          bottom: "-5vh",
+          position: "absolute",
+          left: 0,
+        }}
+      ></img>
+    </div>
+  );
 };
