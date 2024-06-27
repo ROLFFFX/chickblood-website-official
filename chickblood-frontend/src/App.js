@@ -13,6 +13,7 @@ import Issue1 from "./components/blog/issues/Issue1";
 import FallingTest from "./beta/FallingTest";
 import MemberPage from "./components/member/MemberPage";
 import ContactPage from "./components/contact/ContactPage";
+import Test from "./beta/Test";
 
 function Layout({ children }) {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/playground" element={<Playground />} />
           <Route path="/falling" element={<FallingTest />} />
           <Route path="/blog/issue1" element={<Issue1 />} />
+          <Route path="/test" element={<Test />} />
         </Routes>
       </ThemeProvider>
     </React.Fragment>

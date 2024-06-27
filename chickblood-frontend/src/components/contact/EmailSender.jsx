@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import useFontFamily from "../../hooks/useFontFamily";
 import { useTranslation } from "react-i18next";
 import useColorPalette from "../../hooks/useColorPalette";
+import axios from "axios";
+import { serverURL } from "../../config";
 
 export default function EmailSender() {
   const useFont = useFontFamily();
@@ -33,18 +35,35 @@ export default function EmailSender() {
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
   };
-  // EndHandling Message----
-  const handleSubmit = () => {
+  // End Handling Message----
+  const handleSubmit = async () => {
     const emailContent = {
       eName: name,
       eEmail: email,
       eTitle: title,
       eMessage: message,
     };
-    /**
-     * @todo email sender logic to be implemented here
-     * */
-    console.log(emailContent);
+
+    try {
+      console.log("Start Sending Email.");
+      const response = await axios.post(
+        `${serverURL}/api/send-email`,
+        emailContent
+      );
+      if (response.status === 200) {
+        console.log("Email sent successfully");
+        setName("");
+        setEmail("");
+        setTitle("");
+        setMessage("");
+      } else {
+        console.log("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error Sending Email: ", error);
+    } finally {
+      // close loader and give success toast here
+    }
   };
   const theme = customTheme(outerTheme, useFont);
 

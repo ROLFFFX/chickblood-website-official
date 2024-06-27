@@ -6,7 +6,7 @@ import { ThemeContext } from "../context/ThemeProvider";
 export default function CustomCursor({ size = 128 }) {
   const [isHoveringClickable, setIsHoveringClickable] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const positionRef = useRef(null);
+  const positionRef = useRef({ x: -size, y: -size });
   const cursorRef = useRef(null);
   const audioRef = useRef(null);
   const { themeMode } = useContext(ThemeContext);

@@ -16,12 +16,12 @@ export default function ContactPage() {
         <HideableDrawer />
       </Box>
       <Grid container>
-        <Grid item xs={6}>
+        <Grid item xs={8}>
           <SocialMediaLinks></SocialMediaLinks>
         </Grid>
         <Grid
           item
-          xs={6}
+          xs={4}
           height={"100vh"}
           p={3}
           sx={{
@@ -42,7 +42,7 @@ export default function ContactPage() {
         sx={{
           height: "90vh",
           position: "absolute",
-          left: "50%",
+          left: "66.6%",
           top: "5%",
           bgcolor: themeMode === "light" ? "#000000" : "#FFFFFF",
         }}

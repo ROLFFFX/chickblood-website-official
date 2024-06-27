@@ -16,13 +16,14 @@ import { styled } from "@mui/material/styles";
 import { motion } from "framer-motion";
 import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { ThemeContext } from "../../../context/ThemeProvider";
 import useColorPalette from "../../../hooks/useColorPalette";
 import useFontFamily from "../../../hooks/useFontFamily";
 import BlogBackBTN from "../../../utils/BlogBackBTN";
 import CustomCursor from "../../../utils/CustomCursor";
 import LanguageBTN from "../../../utils/LanguageBTN";
+import LoadingPage from "../../../utils/LoadingPage";
 import ShareBTN from "../../../utils/ShareBTN";
-import { ThemeContext } from "../../../context/ThemeProvider";
 
 export default function Issue1() {
   /** inFrame state detects if mouse is in iframe.  */
@@ -116,6 +117,16 @@ function IndexDrawer() {
   const useFont = useFontFamily();
   const [content, setContent] = useState(1);
   const { themeMode } = useContext(ThemeContext);
+
+  /** Loader states */
+  const [openLoader, setOpenLoader] = React.useState(false); // this state controls the open and closing of loader
+  const handleCloseLoader = () => {
+    setOpenLoader(false);
+  };
+  const handleOpenLoader = () => {
+    setOpenLoader(true);
+  };
+
   /**
    * ListItemText Styles. Defines the FontSize/Family and Motion of List Item Texts.
    **/
@@ -153,6 +164,10 @@ function IndexDrawer() {
 
   return (
     <Box sx={{ display: "flex", cursor: "none" }}>
+      <LoadingPage
+        openLoader={openLoader}
+        handleClose={handleCloseLoader}
+      ></LoadingPage>
       <CustomDrawer variant="permanent" open={open}>
         <CustomCursor></CustomCursor>
         {/* Header Section. Contains Icon and Hide Menu Button */}
@@ -229,35 +244,44 @@ function IndexDrawer() {
           </Box>
           <List disablePadding>
             <ListItem disablePadding>
-              <AnimatedListItemButton>
+              <AnimatedListItemButton
+                onClick={() => {
+                  handleOpenLoader();
+                  setContent(1);
+                  handleCloseLoader();
+                }}
+              >
                 <AnimatedListItemText
                   primary={open ? t("dummyheading") + "1" : "1"}
                   sx={ListItemTextStyle}
-                  onClick={() => {
-                    setContent(1);
-                  }}
                 />
               </AnimatedListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <AnimatedListItemButton>
+              <AnimatedListItemButton
+                onClick={() => {
+                  // handleOpenLoader();
+                  setContent(2);
+                  // handleCloseLoader();
+                }}
+              >
                 <AnimatedListItemText
                   primary={open ? t("dummyheading") + "2" : "2"}
                   sx={ListItemTextStyle}
-                  onClick={() => {
-                    setContent(2);
-                  }}
                 />
               </AnimatedListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <AnimatedListItemButton>
+              <AnimatedListItemButton
+                onClick={() => {
+                  handleOpenLoader();
+                  setContent(3);
+                  handleCloseLoader();
+                }}
+              >
                 <AnimatedListItemText
                   primary={open ? t("dummyheading") + "3" : "3"}
                   sx={ListItemTextStyle}
-                  onClick={() => {
-                    setContent(3);
-                  }}
                 />
               </AnimatedListItemButton>
             </ListItem>
