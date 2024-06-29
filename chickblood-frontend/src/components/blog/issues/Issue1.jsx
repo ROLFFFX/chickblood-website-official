@@ -260,9 +260,9 @@ function IndexDrawer() {
             <ListItem disablePadding>
               <AnimatedListItemButton
                 onClick={() => {
-                  // handleOpenLoader();
+                  handleOpenLoader();
                   setContent(2);
-                  // handleCloseLoader();
+                  handleCloseLoader();
                 }}
               >
                 <AnimatedListItemText

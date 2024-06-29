@@ -122,4 +122,57 @@ export default function Example(){
 }
 ```
 
+## Media Content (Images, Videos, and More)
+### Images
+All image contents are delivered through cloudfare CDN.
+#### Image Preload
+To display loading page upon image loading, we can use this preload prcedure:
+```
+const imageUrls = [
+  "image url here",
+];
+
+const Example = () => {
+  /** Loader states and handle image preload */
+  const handleCloseLoader = () => {
+    setOpenLoader(false);
+  };
+  const handleOpenLoader = () => {
+    setOpenLoader(true);
+  };
+  const loadImage = (src) => {
+    console.log("Image loading.");
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = resolve;
+      img.onerror = reject;
+    });
+  };
+  useEffect(() => {
+    const preloadImages = async () => {
+      try {
+        await Promise.all(imageUrls.map((url) => loadImage(url)));
+
+        setOpenLoader(false);
+      } catch (error) {
+        console.error("Error loading images:", error);
+      }
+    };
+
+    preloadImages();
+  }, []);
+
+  return (
+    <div>
+      <LoadingPage
+        openLoader={openLoader}
+        handleClose={handleCloseLoader}
+      ></LoadingPage>
+      // Rest of the page goes here. Use the image url in image components.
+    </div>
+  )
+}
+```
+
 

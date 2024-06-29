@@ -4,11 +4,57 @@ import { React, useContext, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../context/ThemeProvider";
 import useFontFamily from "../../hooks/useFontFamily";
+import LoadingPage from "../../utils/LoadingPage";
+
+// cloudfare images preload
+const imageUrls = [
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/2adf6338-6e0a-4ea7-7099-9c591fec2c00/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/aad5eaf8-af55-44d3-4eab-6b3bdec2e400/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/0df3a57f-37dd-4091-9732-1ce506050a00/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/f55854c8-1dce-4802-b918-c3f7696a2b00/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/2afd1f87-473a-4495-1c44-e4051e6ede00/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/0cde38b6-375b-4bf1-ca26-3c4e783d9800/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/083c031d-4b3c-407f-25bb-c4c431e46b00/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/9c9e07e5-d08e-4045-3a5e-8d66c0437f00/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/c76f1e33-cdee-4640-4f38-c33af52ecd00/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/109a74c0-26b2-4eeb-5a1e-083d24bea300/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/9b0bbe26-a577-41ed-f170-592327bf3800/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/5728a3f5-e205-4119-f9f1-252527903100/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/a892f4ab-5495-42ad-1efa-441c10677c00/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/aadf372c-9f3f-497d-89bc-163a31e4dd00/public",
+];
 
 export default function SocialMediaLinks() {
   const sceneRef = useRef(null);
   const { width, height } = useWindowSize();
   const { themeMode } = useContext(ThemeContext);
+  const [openLoader, setOpenLoader] = useState(true);
+  /** Loader states and handle image preload */
+  const handleCloseLoader = () => {
+    setOpenLoader(false);
+  };
+  const loadImage = (src) => {
+    console.log("Image loading.");
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = resolve;
+      img.onerror = reject;
+    });
+  };
+  useEffect(() => {
+    const preloadImages = async () => {
+      try {
+        await Promise.all(imageUrls.map((url) => loadImage(url)));
+
+        setOpenLoader(false);
+      } catch (error) {
+        console.error("Error loading images:", error);
+      }
+    };
+
+    preloadImages();
+  }, []);
   useEffect(() => {
     // Module aliases
     const Engine = Matter.Engine,
@@ -50,7 +96,7 @@ export default function SocialMediaLinks() {
       1000,
       {
         isStatic: true,
-        render: { fillStyle: "red", border: 1 },
+        render: { fillStyle: "transparent", border: 1 },
       }
     );
 
@@ -164,7 +210,7 @@ export default function SocialMediaLinks() {
       {
         isStatic: true,
         render: {
-          fillStyle: "red",
+          fillStyle: "transparent",
         },
       }
     );
@@ -212,6 +258,10 @@ export default function SocialMediaLinks() {
 
   return (
     <div ref={sceneRef} style={{ position: "relative", overflow: "hidden" }}>
+      <LoadingPage
+        openLoader={openLoader}
+        handleClose={handleCloseLoader}
+      ></LoadingPage>
       <CreditBox></CreditBox>
       <ContactIconBox></ContactIconBox>
     </div>
@@ -271,8 +321,9 @@ const ContactIconBox = () => {
     bottom: "0",
     left: "-1px",
     borderTopRightRadius: "50.5vh",
-    border: themeMode === "light" ? "0.4px solid black" : "0.4px solid white",
+    border: themeMode === "light" ? "1px solid black" : "0.4px solid white",
     backgroundColor: themeMode === "light" ? "#FFFFFF" : "#222222",
+    zIndex: -1,
   };
   function getImgSource(themeMode) {
     return themeMode === "light"

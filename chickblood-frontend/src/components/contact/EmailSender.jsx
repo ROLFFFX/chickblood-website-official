@@ -55,7 +55,7 @@ export default function EmailSender() {
         setName("");
         setEmail("");
         setTitle("");
-        setMessage("");
+        setMessage(""); 
       } else {
         console.log("Failed to send email");
       }
