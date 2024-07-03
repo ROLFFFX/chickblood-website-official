@@ -3,7 +3,7 @@ import React from "react";
 import HideableDrawer from "../utils/HideableDrawer";
 import Construction from "../beta/Construction";
 
-function Story() {
+function HomePage() {
   return (
     <Box height="100vh" position="relative" style={{ overflow: "hidden" }}>
       <Construction />
@@ -14,4 +14,4 @@ function Story() {
   );
 }
 
-export default Story;
+export default HomePage;

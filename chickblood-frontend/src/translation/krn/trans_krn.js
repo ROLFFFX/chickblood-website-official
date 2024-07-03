@@ -13,6 +13,7 @@ export const TRANSLATION_KRN = {
   contact: "문의하기",
   member: "회원",
   language: "언어",
+  homepage: "홈페이지",
   // random
   lorem:
     "로렘 입숨은 엘리트의식과 함께 앉아 아픔을 겪습니다. 자주 비난받는 평범함과 진실이 욕망과 고통을 동반하며 지속됩니다. 필요한 권력과 권리는 어디에나 있습니다! 모드, 기쁨. 정체성은 그 고통의 이론입니다.",

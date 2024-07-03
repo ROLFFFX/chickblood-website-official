@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import useColorPalette from "../hooks/useColorPalette";
 import useFontFamily from "../hooks/useFontFamily";
 import CustomCursor from "./CustomCursor";
+import useWindowSize from "../hooks/useWindowSize";
 
 export default function LanguageBTN() {
   const useFont = useFontFamily();
@@ -25,9 +26,10 @@ export default function LanguageBTN() {
   };
   const { t } = useTranslation();
   const colorPalette = useColorPalette();
+  const { width } = useWindowSize();
   return (
     <div>
-      <CustomCursor></CustomCursor>
+      {width > 500 ? <CustomCursor></CustomCursor> : null}
       <Button
         aria-controls={open ? "demo-customized-menu" : undefined}
         aria-haspopup="true"

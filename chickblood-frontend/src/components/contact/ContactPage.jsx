@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
 import { Box, Divider, Grid } from "@mui/material";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeProvider";
 import HideableDrawer from "../../utils/HideableDrawer";
 import EmailSender from "./EmailSender";
 import SocialMediaLinks from "./SocialMediaLinks";
-import { ThemeContext } from "../../context/ThemeProvider";
 
 export default function ContactPage() {
   const { themeMode } = useContext(ThemeContext);

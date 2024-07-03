@@ -46,8 +46,8 @@ function LandingPage() {
    */
   const handleSubmit = () => {
     console.log(input);
-    /* After desired interaction (such as mongoInsert), navigating to next story board. */
-    navigate("/story");
+    /* After desired interaction (such as mongoInsert), navigating to next home page. */
+    navigate("/home");
   };
   /**
    * p5 related stuff.
@@ -120,7 +120,7 @@ function LandingPage() {
                   fontFamily: useFont.bold,
                 }}
                 onClick={() => {
-                  navigate("/story");
+                  navigate("/home");
                 }}
                 style={{ cursor: "none" }}
               >

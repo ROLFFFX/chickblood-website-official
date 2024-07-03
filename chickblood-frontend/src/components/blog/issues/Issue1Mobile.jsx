@@ -5,7 +5,6 @@ import {
   Button,
   Divider,
   Drawer,
-  Grid,
   List,
   ListItem,
   ListItemButton,
@@ -20,68 +19,14 @@ import { ThemeContext } from "../../../context/ThemeProvider";
 import useColorPalette from "../../../hooks/useColorPalette";
 import useFontFamily from "../../../hooks/useFontFamily";
 import BlogBackBTN from "../../../utils/BlogBackBTN";
-import CustomCursor from "../../../utils/CustomCursor";
 import LanguageBTN from "../../../utils/LanguageBTN";
 import LoadingPage from "../../../utils/LoadingPage";
 import ShareBTN from "../../../utils/ShareBTN";
 
-export default function Issue1() {
-  /** inFrame state detects if mouse is in iframe.  */
-  const [inIframe, setInIframe] = useState(false);
-  const handleMouseEnter = () => {
-    setInIframe(true);
-  };
-  const handleMouseLeave = () => {
-    setInIframe(false);
-  };
-
+export default function Issue1Mobile() {
   return (
     <Box>
-      <Grid
-        container
-        sx={{
-          width: "100%",
-          height: "100vh",
-        }}
-      >
-        {!inIframe && <CustomCursor />}
-        {/* Drawer & Content */}
-        <Grid item xs={9} sx={{ overflow: "auto", height: "100vh" }}>
-          <Box>
-            <IndexDrawer />
-          </Box>
-        </Grid>
-
-        {/* Spotify Embed & About Page */}
-        <Grid item xs={3}>
-          <Box sx={{ overflow: "visible", height: "100vh" }}>
-            <Box p={2} height={"100%"}>
-              <iframe
-                style={{ borderRadius: "12px", padding: 4 }}
-                src="https://open.spotify.com/embed/playlist/1nHHxMzRJVaD6Cru1okKxd?utm_source=generator"
-                width="100%"
-                height="100%"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                title="SPF 1"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              ></iframe>
-            </Box>
-          </Box>
-        </Grid>
-      </Grid>
-      {/* divider with absolute position */}
-      <Divider
-        orientation="vertical"
-        flexItem
-        sx={{
-          height: "100vh",
-          position: "absolute",
-          left: "75%",
-          top: 0,
-          bgcolor: "#000000",
-        }}
-      />
+      <IndexDrawer />
     </Box>
   );
 }
@@ -108,7 +53,7 @@ const CustomDrawer = styled(Drawer)(({ theme, open }) => ({
 }));
 
 function IndexDrawer() {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const handleDrawerToggle = () => {
     setOpen(!open);
   };
@@ -169,7 +114,6 @@ function IndexDrawer() {
         handleClose={handleCloseLoader}
       ></LoadingPage>
       <CustomDrawer variant="permanent" open={open}>
-        <CustomCursor></CustomCursor>
         {/* Header Section. Contains Icon and Hide Menu Button */}
         <Box overflow={"visible"}>
           <DrawerHeader>
@@ -311,21 +255,25 @@ function IndexDrawer() {
           )}
         </Box>
       </CustomDrawer>
-      <Box
-        component="main"
-        sx={{
-          p: 3,
-          overflow: "auto",
-        }}
-      >
-        {content === 1 ? (
-          <Section1 />
-        ) : content === 2 ? (
-          <Section2 />
-        ) : content === 3 ? (
-          <Section3 />
-        ) : null}
-      </Box>
+      {open ? (
+        <Box>hide the menu to see content. what should i put here?</Box>
+      ) : (
+        <Box
+          component="main"
+          sx={{
+            p: 3,
+            overflow: "auto",
+          }}
+        >
+          {content === 1 ? (
+            <Section1 />
+          ) : content === 2 ? (
+            <Section2 />
+          ) : content === 3 ? (
+            <Section3 />
+          ) : null}
+        </Box>
+      )}
     </Box>
   );
 }

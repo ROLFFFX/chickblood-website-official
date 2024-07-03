@@ -300,7 +300,7 @@ const CreditBox = () => {
       }}
     >
       <img
-        src="/pics/icons/CreditBoxBackground.png"
+        src="/pics/icons/credit_box_icon_light.png"
         style={{ height: "100%" }}
         alt="credit box"
       ></img>
@@ -322,7 +322,7 @@ const ContactIconBox = () => {
     left: "-1px",
     borderTopRightRadius: "50.5vh",
     border: themeMode === "light" ? "1px solid black" : "0.4px solid white",
-    backgroundColor: themeMode === "light" ? "#FFFFFF" : "#222222",
+
     zIndex: -1,
   };
   function getImgSource(themeMode) {
@@ -338,6 +338,7 @@ const ContactIconBox = () => {
     }
     return "35px";
   }
+
   return (
     <div style={style}>
       <Box

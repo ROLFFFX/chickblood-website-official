@@ -13,6 +13,7 @@ import useFontFamily from "../hooks/useFontFamily";
 import { IoMdShare } from "react-icons/io";
 import { useTranslation } from "react-i18next";
 import { FaSquareThreads } from "react-icons/fa6";
+import useWindowSize from "../hooks/useWindowSize";
 
 const ShareBTN = ({ url, title }) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -21,7 +22,7 @@ const ShareBTN = ({ url, title }) => {
   const useFont = useFontFamily();
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const { t } = useTranslation();
-
+  const { width } = useWindowSize();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -134,25 +135,29 @@ const ShareBTN = ({ url, title }) => {
         </MenuItem>
 
         {/* Copy Link */}
-        <MenuItem
-          onClick={handleCopyLink}
-          disableRipple
-          style={{ cursor: "none" }}
-        >
-          <Box
-            sx={{
-              width: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+        {width > 500 && (
+          <MenuItem
+            onClick={handleCopyLink}
+            disableRipple
+            style={{ cursor: "none" }}
           >
-            <ContentCopyIcon size={25} />
-            <Typography sx={{ ml: 2, fontFamily: useFont.bold, fontSize: 13 }}>
-              Copy Link
-            </Typography>
-          </Box>
-        </MenuItem>
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <ContentCopyIcon size={25} />
+              <Typography
+                sx={{ ml: 2, fontFamily: useFont.bold, fontSize: 13 }}
+              >
+                Copy Link
+              </Typography>
+            </Box>
+          </MenuItem>
+        )}
       </StyledMenu>
       <Snackbar
         open={openSnackbar}
