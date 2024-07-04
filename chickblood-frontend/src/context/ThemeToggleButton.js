@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "./ThemeProvider";
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, Box } from "@mui/material";
 import useColorPalette from "../hooks/useColorPalette";
 import useFontFamily from "../hooks/useFontFamily";
 import { useTranslation } from "react-i18next";
@@ -19,6 +19,7 @@ const ThemeToggleButton = () => {
       style={{
         cursor: "none",
         backgroundColor: colorPalette.pear,
+        width: "100%",
       }}
       variant="contained"
       disableElevation
@@ -31,7 +32,7 @@ const ThemeToggleButton = () => {
       )}
 
       <Typography
-        ml={2}
+        ml={1}
         sx={{
           color: "#242105",
           fontFamily: useFont.bold,

@@ -175,4 +175,33 @@ const Example = () => {
 }
 ```
 
+### iFrame
+#### iframe onLoad
+To display loading page upon iframe loading, see:
+```
+function Example() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(true);
+  const handleLoad = () => {
+    setLoading(false);
+  }
+  const handleError = () => {
+    setError(false);
+  }
+  return <div>
+    <iframe
+      src="example_source.com"
+      onLoad={handleLoad}
+      onError={handleError}
+      style={{
+      display: loading || error ? "none" : "block",
+      width: "100%",
+      height: "500px",
+      }}
+    />
+  </div>;
+
+}
+```
+
 

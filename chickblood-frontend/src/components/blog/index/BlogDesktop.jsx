@@ -10,13 +10,14 @@ import { motion } from "framer-motion";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import useFontFamily from "../../hooks/useFontFamily";
-import HideableDrawer from "../../utils/HideableDrawer";
+import useFontFamily from "../../../hooks/useFontFamily";
+import HideableDrawer from "../../../utils/HideableDrawer";
 
-export default function Blog() {
+export default function BlogDesktop() {
   const navigate = useNavigate();
   const useFont = useFontFamily();
   const { t } = useTranslation();
+
   /**
    * ListItemText Styles. Defines the FontSize/Family and Motion of List Item Texts.
    **/
@@ -72,6 +73,7 @@ export default function Blog() {
             "& > :not(style)": {
               m: 1,
               width: "30vw",
+              minWidth: "400px",
               height: "80vh",
             },
           }}

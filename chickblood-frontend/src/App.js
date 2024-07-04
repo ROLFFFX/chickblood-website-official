@@ -6,7 +6,7 @@ import Playground from "./beta/Playground";
 import Test from "./beta/Test";
 import HomePage from "./components/HomePage";
 import LandingPage from "./components/LandingPage";
-import Blog from "./components/blog/Blog";
+import BlogMain from "./components/blog/index/BlogMain";
 import Issue1Main from "./components/blog/issues/Issue1Main";
 import ContactPage from "./components/contact/ContactPage";
 import MemberPage from "./components/member/MemberPage";
@@ -34,7 +34,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/member" element={<MemberPage />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog" element={<BlogMain />} />
             <Route path="/contact" element={<ContactPage />} />
           </Route>
           <Route path="/playground" element={<Playground />} />
