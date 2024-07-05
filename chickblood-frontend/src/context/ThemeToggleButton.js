@@ -1,11 +1,10 @@
+import { Button, Typography } from "@mui/material";
 import React, { useContext } from "react";
-import { ThemeContext } from "./ThemeProvider";
-import { Button, Typography, Box } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import { MdLightMode, MdModeNight } from "react-icons/md";
 import useColorPalette from "../hooks/useColorPalette";
 import useFontFamily from "../hooks/useFontFamily";
-import { useTranslation } from "react-i18next";
-import { MdLightMode } from "react-icons/md";
-import { MdModeNight } from "react-icons/md";
+import { ThemeContext } from "./ThemeProvider";
 
 const ThemeToggleButton = () => {
   const colorPalette = useColorPalette();

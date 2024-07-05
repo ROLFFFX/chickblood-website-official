@@ -88,7 +88,7 @@ function Carousel({ radius = 1.4 }) {
       />
       <Card
         key={5}
-        url="pics/cbicon_red.png"
+        url="pics/icons/test.webp"
         position={[
           Math.sin((5 * Math.PI) / 3) * radius,
           0,
@@ -109,7 +109,7 @@ function Card({ url, ...props }) {
   };
   const pointerOut = () => hover(false);
   useFrame((state, delta) => {
-    easing.damp3(ref.current.scale, hovered ? 1.15 : 1, 0.1, delta);
+    easing.damp3(ref.current.scale, hovered ? 1.1 : 1, 0.1, delta);
     easing.damp(
       ref.current.material,
       "radius",
@@ -117,7 +117,7 @@ function Card({ url, ...props }) {
       0.2,
       delta
     );
-    easing.damp(ref.current.material, "zoom", hovered ? 1 : 1.5, 0.2, delta);
+    easing.damp(ref.current.material, "zoom", hovered ? 1 : 1.1, 0.2, delta); // 1.1 is the current zoom ratio
   });
   return (
     <Image
@@ -136,7 +136,7 @@ function Card({ url, ...props }) {
 
 function Banner(props) {
   const ref = useRef();
-  const texture = useTexture("pics/cbicon_red.png");
+  const texture = useTexture("pics/icons/test.webp");
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
   const scroll = useScroll();
   useFrame((state, delta) => {
