@@ -136,7 +136,7 @@ function Card({ url, ...props }) {
 
 function Banner(props) {
   const ref = useRef();
-  const texture = useTexture("pics/icons/test.webp");
+  const texture = useTexture("pics/cb2024.png");
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
   const scroll = useScroll();
   useFrame((state, delta) => {
@@ -149,7 +149,7 @@ function Banner(props) {
       <meshSineMaterial
         map={texture}
         map-anisotropy={16}
-        map-repeat={[30, 1]}
+        map-repeat={[20, 1]}
         side={THREE.DoubleSide}
         toneMapped={false}
       />

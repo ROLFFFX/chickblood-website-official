@@ -89,23 +89,23 @@ export default function HideableDrawer() {
             />
           </AnimatedListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        {/* <ListItem disablePadding>
           <AnimatedListItemButton>
             <AnimatedListItemText
               primary={t("events")}
               sx={ListItemTextStyle}
             />
           </AnimatedListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
+        </ListItem> */}
+        {/* <ListItem disablePadding>
           <AnimatedListItemButton>
             <AnimatedListItemText
               primary={t("merchandise")}
               sx={ListItemTextStyle}
             />
           </AnimatedListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
+        </ListItem> */}
+        {/* <ListItem disablePadding>
           <AnimatedListItemButton>
             <AnimatedListItemText
               primary={t("archive")}
@@ -120,7 +120,7 @@ export default function HideableDrawer() {
               sx={ListItemTextStyle}
             />
           </AnimatedListItemButton>
-        </ListItem>
+        </ListItem> */}
         <ListItem disablePadding>
           <AnimatedListItemButton
             onClick={() => {

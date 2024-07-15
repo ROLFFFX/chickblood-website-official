@@ -8,12 +8,13 @@ import HomePage from "./components/HomePage";
 import LandingPage from "./components/LandingPage";
 import BlogMain from "./components/blog/index/BlogMain";
 import Issue1Main from "./components/blog/issues/Issue1Main";
-import ContactPage from "./components/contact/ContactPage";
+import ContactMain from "./components/contact/ContactMain";
 import MemberPage from "./components/member/MemberPage";
 import ThemeProvider from "./context/ThemeProvider";
 import useFontFamily from "./hooks/useFontFamily";
 import "./translation/i18n";
 import CustomCursor from "./utils/CustomCursor";
+import ContactPage from "./components/contact/ContactPage";
 
 function Layout({ children }) {
   return (
@@ -35,7 +36,8 @@ function App() {
             <Route path="/home" element={<HomePage />} />
             <Route path="/member" element={<MemberPage />} />
             <Route path="/blog" element={<BlogMain />} />
-            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/contact" element={<ContactMain />} />
+            <Route path="/contactold" element={<ContactPage />} />
           </Route>
           <Route path="/playground" element={<Playground />} />
           <Route path="/falling" element={<FallingTest />} />
