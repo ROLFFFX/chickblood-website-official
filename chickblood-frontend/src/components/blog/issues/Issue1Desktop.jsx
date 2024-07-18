@@ -27,13 +27,13 @@ import ShareBTN from "../../../utils/ShareBTN";
 
 export default function Issue1Desktop() {
   /** inFrame state detects if mouse is in iframe.  */
-  const [inIframe, setInIframe] = useState(false);
-  const handleMouseEnter = () => {
-    setInIframe(true);
-  };
-  const handleMouseLeave = () => {
-    setInIframe(false);
-  };
+  // const [inIframe, setInIframe] = useState(false);
+  // const handleMouseEnter = () => {
+  //   setInIframe(true);
+  // };
+  // const handleMouseLeave = () => {
+  //   setInIframe(false);
+  // };
 
   return (
     <Box>
@@ -44,16 +44,16 @@ export default function Issue1Desktop() {
           height: "100vh",
         }}
       >
-        {!inIframe && <CustomCursor />}
+        <CustomCursor />
         {/* Drawer & Content */}
-        <Grid item xs={9} sx={{ overflow: "auto", height: "100vh" }}>
+        <Grid item xs={12} sx={{ overflow: "auto", height: "100vh" }}>
           <Box>
             <IndexDrawer />
           </Box>
         </Grid>
 
         {/* Spotify Embed & About Page */}
-        <Grid item xs={3}>
+        {/* <Grid item xs={3}>
           <Box sx={{ overflow: "visible", height: "100vh" }}>
             <Box p={2} height={"100%"}>
               <iframe
@@ -68,10 +68,10 @@ export default function Issue1Desktop() {
               ></iframe>
             </Box>
           </Box>
-        </Grid>
+        </Grid> */}
       </Grid>
       {/* divider with absolute position */}
-      <Divider
+      {/* <Divider
         orientation="vertical"
         flexItem
         sx={{
@@ -81,7 +81,7 @@ export default function Issue1Desktop() {
           top: 0,
           bgcolor: "#000000",
         }}
-      />
+      /> */}
     </Box>
   );
 }
