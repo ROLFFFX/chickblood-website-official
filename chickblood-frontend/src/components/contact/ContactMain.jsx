@@ -6,6 +6,7 @@ import useFontFamily from "../../hooks/useFontFamily";
 import useWindowSize from "../../hooks/useWindowSize";
 import HideableDrawer from "../../utils/HideableDrawer";
 import LoadingPage from "../../utils/LoadingPage";
+import { motion } from "framer-motion";
 
 // cloudfare images preload
 const imageUrls = [
@@ -114,6 +115,7 @@ export default function ContactMain() {
 
     // clickable rectangles --------------------------------
     const tiktok = Bodies.rectangle(width / 2 - 250, 0, 50, 50, {
+      label: "https://www.instagram.com/chickblooood/",
       restitution: 0.7,
       density: 0.5,
       render: {
@@ -129,6 +131,7 @@ export default function ContactMain() {
     });
 
     const insta = Bodies.rectangle(width / 2 - 150, 0, 50, 50, {
+      label: "https://www.instagram.com/chickblooood/",
       restitution: 0.7,
       density: 0.5,
       render: {
@@ -144,6 +147,7 @@ export default function ContactMain() {
     });
 
     const youtube = Bodies.rectangle(width / 2 - 50, 0, 50, 50, {
+      label: "https://www.instagram.com/chickblooood/",
       restitution: 0.7,
       density: 0.5,
       render: {
@@ -158,6 +162,7 @@ export default function ContactMain() {
       },
     });
     const twitter = Bodies.rectangle(width / 2 + 50, 0, 50, 50, {
+      label: "https://www.instagram.com/chickblooood/",
       restitution: 0.7,
       density: 0.5,
       render: {
@@ -172,6 +177,7 @@ export default function ContactMain() {
       },
     });
     const discord = Bodies.rectangle(width / 2 + 150, 0, 50, 50, {
+      label: "https://www.instagram.com/chickblooood/",
       restitution: 0.7,
       density: 0.5,
       render: {
@@ -186,6 +192,7 @@ export default function ContactMain() {
       },
     });
     const xhs = Bodies.rectangle(width / 2 + 250, 0, 50, 50, {
+      label: "https://www.instagram.com/chickblooood/",
       restitution: 0.7,
       density: 0.5,
       render: {
@@ -261,6 +268,20 @@ export default function ContactMain() {
       },
     });
     Matter.World.add(engine.world, mouseConstraint);
+
+    // handles onclick events to open up the corresponding link
+    Matter.Events.on(mouseConstraint, "mousedown", function (event) {
+      const mousePosition = event.mouse.position;
+      const bodies = Matter.Composite.allBodies(engine.world);
+
+      for (let i = 0; i < bodies.length; i++) {
+        const body = bodies[i];
+        if (Matter.Bounds.contains(body.bounds, mousePosition)) {
+          window.open(body.label, "_blank");
+          break;
+        }
+      }
+    });
 
     // Run the engine
     Matter.Runner.run(engine);
@@ -390,14 +411,16 @@ export default function ContactMain() {
       </Box>
       {/* Icon picture */}
       <Box sx={{ position: "absolute", left: "calc(50% - 250px)" }}>
-        <img
-          src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/a892f4ab-5495-42ad-1efa-441c10677c00/public"
-          alt="blog icon"
-          style={{
-            width: "500px",
-            height: "500px",
-          }}
-        ></img>
+        <motion.div whileHover={{ scale: 1.1 }}>
+          <img
+            src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/a892f4ab-5495-42ad-1efa-441c10677c00/public"
+            alt="blog icon"
+            style={{
+              width: "500px",
+              height: "500px",
+            }}
+          ></img>
+        </motion.div>
       </Box>
       {/* Click to contact */}
       <Box
