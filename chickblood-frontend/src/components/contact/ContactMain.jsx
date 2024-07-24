@@ -1,4 +1,5 @@
-import { Box, Typography } from "@mui/material";
+import { Backdrop, Box, Fade, Modal, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 import Matter from "matter-js";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { ThemeContext } from "../../context/ThemeProvider";
@@ -6,7 +7,6 @@ import useFontFamily from "../../hooks/useFontFamily";
 import useWindowSize from "../../hooks/useWindowSize";
 import HideableDrawer from "../../utils/HideableDrawer";
 import LoadingPage from "../../utils/LoadingPage";
-import { motion } from "framer-motion";
 
 // cloudfare images preload
 const imageUrls = [
@@ -41,6 +41,10 @@ export default function ContactMain() {
   const { width, height } = useWindowSize();
   const { themeMode } = useContext(ThemeContext);
   const [openLoader, setOpenLoader] = useState(true);
+  // modal states
+  const [openModal, setOpenModal] = React.useState(false);
+  const handleOpenModal = () => setOpenModal(true);
+  const handleCloseModal = () => setOpenModal(false);
   /** Loader states and handle image preload */
   const handleCloseLoader = () => {
     setOpenLoader(false);
@@ -216,6 +220,7 @@ export default function ContactMain() {
       width,
       1000,
       {
+        label: "no",
         isStatic: true,
         render: { fillStyle: "transparent" },
       }
@@ -228,6 +233,7 @@ export default function ContactMain() {
       height,
       0.5,
       {
+        label: "no",
         isStatic: true,
         render: { fillStyle: "transparent" },
       }
@@ -240,6 +246,7 @@ export default function ContactMain() {
       height,
       0.5,
       {
+        label: "no",
         isStatic: true,
         render: { fillStyle: "transparent" },
       }
@@ -276,7 +283,11 @@ export default function ContactMain() {
 
       for (let i = 0; i < bodies.length; i++) {
         const body = bodies[i];
-        if (Matter.Bounds.contains(body.bounds, mousePosition)) {
+        if (
+          body.label &&
+          body.label !== "no" &&
+          Matter.Bounds.contains(body.bounds, mousePosition)
+        ) {
           window.open(body.label, "_blank");
           break;
         }
@@ -411,7 +422,7 @@ export default function ContactMain() {
       </Box>
       {/* Icon picture */}
       <Box sx={{ position: "absolute", left: "calc(50% - 250px)" }}>
-        <motion.div whileHover={{ scale: 1.1 }}>
+        <motion.div whileHover={{ scale: 1.1 }} onClick={handleOpenModal}>
           <img
             src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/a892f4ab-5495-42ad-1efa-441c10677c00/public"
             alt="blog icon"
@@ -440,6 +451,48 @@ export default function ContactMain() {
           </Typography>
         </Box>
       </Box>
+      <div>
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={openModal}
+          onClose={handleCloseModal}
+          closeAfterTransition
+          slots={{ backdrop: Backdrop }}
+          slotProps={{
+            backdrop: {
+              timeout: 500,
+            },
+          }}
+        >
+          <Fade in={openModal}>
+            <Box sx={ModalStyle}>
+              <Typography
+                id="transition-modal-title"
+                variant="h6"
+                component="h2"
+              >
+                Text in a modal
+              </Typography>
+              <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+              </Typography>
+            </Box>
+          </Fade>
+        </Modal>
+      </div>
     </div>
   );
 }
+
+const ModalStyle = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
