@@ -1,8 +1,16 @@
 import { Box } from "@mui/material";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CBAppBar from "../../../utils/CBAppBar";
 import LanguageIcon from "../../../utils/LanguageIcon";
+import LoadingPage from "../../../utils/LoadingPage";
+
+const imageUrls = [
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/65b99df8-9b51-44c1-492a-4a8f91e12f00/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/6b68130c-9a2b-40bb-b971-ddb32b99b200/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/96d5ae81-cfb3-4e45-5687-ae04972f8800/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/18bd550e-a03d-437b-29b7-fc2f99fc3a00/public",
+];
 
 export default function BlogMain() {
   // true: basket, false: index
@@ -15,6 +23,33 @@ export default function BlogMain() {
   const handleOpenBasket = () => {
     setBasket(true);
   };
+  /** Loader states and handle image preload */
+  const [openLoader, setOpenLoader] = useState(true);
+
+  const handleCloseLoader = () => {
+    setOpenLoader(false);
+  };
+  const loadImage = (src) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = resolve;
+      img.onerror = reject;
+    });
+  };
+  useEffect(() => {
+    const preloadImages = async () => {
+      try {
+        await Promise.all(imageUrls.map((url) => loadImage(url)));
+
+        setOpenLoader(false);
+      } catch (error) {
+        console.error("Error loading images:", error);
+      }
+    };
+
+    preloadImages();
+  }, []);
 
   return basket ? (
     // basket page:
@@ -28,6 +63,11 @@ export default function BlogMain() {
         backgroundSize: "300px auto",
       }}
     >
+      {/* Loading Page */}
+      <LoadingPage
+        openLoader={openLoader}
+        handleClose={handleCloseLoader}
+      ></LoadingPage>
       {/* app bar */}
       <CBAppBar />
       {/* basket */}
@@ -47,7 +87,7 @@ export default function BlogMain() {
           style={{ transformOrigin: "center" }}
         >
           <img
-            src="pics/WEB_image/blog/basket.png"
+            src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/18bd550e-a03d-437b-29b7-fc2f99fc3a00/public"
             alt="basket"
             height="300px"
             width="auto"

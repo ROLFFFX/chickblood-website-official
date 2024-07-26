@@ -38,13 +38,13 @@ function App() {
             <Route path="/member" element={<MemberPage />} />
             <Route path="/blog" element={<BlogMain />} />
             <Route path="/contact" element={<ContactMain />} />
+            <Route path="/eventhome" element={<EventHome />} />
             <Route path="/contactold" element={<ContactPage />} />
           </Route>
           <Route path="/playground" element={<Playground />} />
           <Route path="/falling" element={<FallingTest />} />
           <Route path="/blog/issue1" element={<Issue1Main />} />
           <Route path="/test" element={<Test />} />
-          <Route path="/eventhome" element={<EventHome />} />
         </Routes>
       </ThemeProvider>
     </React.Fragment>

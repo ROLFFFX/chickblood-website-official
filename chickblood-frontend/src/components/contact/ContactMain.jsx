@@ -289,6 +289,14 @@ export default function ContactMain() {
       }
     });
 
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        mouseConstraint.mouse.button = -1; // Ensure the mouse is not "clicked"
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     // Run the engine
     Matter.Runner.run(engine);
 
