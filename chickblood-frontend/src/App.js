@@ -16,6 +16,7 @@ import "./translation/i18n";
 import CustomCursor from "./utils/CustomCursor";
 import ContactPage from "./components/contact/ContactPage";
 import EventHome from "./components/events/EventHome";
+import GenerationalBruise from "./components/blog/generationalBruise/GenerationalBruise";
 
 function Layout({ children }) {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path="/falling" element={<FallingTest />} />
           <Route path="/blog/issue1" element={<Issue1Main />} />
           <Route path="/test" element={<Test />} />
+          <Route path="/blog/genbruise" element={<GenerationalBruise />} />
         </Routes>
       </ThemeProvider>
     </React.Fragment>

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import CBAppBar from "../../../utils/CBAppBar";
 import LanguageIcon from "../../../utils/LanguageIcon";
 import LoadingPage from "../../../utils/LoadingPage";
+import { useNavigate } from "react-router-dom";
 
 const imageUrls = [
   "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/65b99df8-9b51-44c1-492a-4a8f91e12f00/public",
@@ -13,6 +14,7 @@ const imageUrls = [
 ];
 
 export default function BlogMain() {
+  const navigate = useNavigate();
   // true: basket, false: index
   const [basket, setBasket] = useState(true);
 
@@ -106,7 +108,7 @@ export default function BlogMain() {
       {/* app bar */}
       <CBAppBar />
       {/* blog back icon */}
-      <Box sx={{ marginLeft: "3%" }}>
+      <Box width={"100%"} height={"calc(100% - 130px)"}>
         <motion.div
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.2 }}
@@ -126,7 +128,34 @@ export default function BlogMain() {
             width="auto"
           />
         </motion.div>
+        {/* generational bruise */}
+        <Box width={"100%"}>
+          <motion.div
+            whileHover={{
+              scale: 1.2,
+            }}
+            style={{
+              position: "absolute",
+              marginTop: "-10%",
+              marginLeft: "40%",
+              transformOrigin: "center",
+            }}
+            onClick={() => {
+              navigate("/blog/genbruise");
+            }}
+          >
+            <img
+              src="/pics/gb.png"
+              alt="generational bruise"
+              style={{
+                height: "auto",
+                width: "300px",
+              }}
+            ></img>
+          </motion.div>
+        </Box>
       </Box>
+
       {/* Language Icon */}
       <motion.div
         whileHover={{

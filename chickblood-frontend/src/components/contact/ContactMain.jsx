@@ -152,7 +152,7 @@ export default function ContactMain() {
     });
 
     const youtube = Bodies.rectangle(width / 2 - 50, 0, 50, 50, {
-      label: "https://www.instagram.com/chickblooood/",
+      label: "https://www.youtube.com/channel/UC-UdB8NEB7vjy53X34AuJYg",
       restitution: 0.7,
       density: 0.5,
       render: {
@@ -197,7 +197,8 @@ export default function ContactMain() {
       },
     });
     const xhs = Bodies.rectangle(width / 2 + 250, 0, 50, 50, {
-      label: "https://www.instagram.com/chickblooood/",
+      label:
+        "https://www.xiaohongshu.com/user/profile/5b0e4f4011be103c22c7eca0?xhsshare=CopyLink&appuid=5b0e4f4011be103c22c7eca0&apptime=1722069584&share_id=6bf16537b9d84267ad3490f6682d6d42",
       restitution: 0.7,
       density: 0.5,
       render: {

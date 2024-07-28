@@ -34,7 +34,7 @@ const lightThemeOptions = {
 
 const darkThemeOptions = {
   palette: {
-    mode: "dark",
+    mode: "light",
     skyBlue: {
       main: "#82CFEF",
     },
@@ -45,15 +45,38 @@ const darkThemeOptions = {
       main: "#013994",
     },
     background: {
-      default: "#222222",
-      paper: "#222222",
+      default: "#FFFFFF",
+      paper: "#FFFFFF",
     },
     text: {
-      primary: "#FFFFFF",
-      secondary: "#FFFFFF",
+      primary: "#000000",
+      secondary: "#000000",
     },
   },
 };
+
+// const darkThemeOptions = {
+//   palette: {
+//     mode: "dark",
+//     skyBlue: {
+//       main: "#82CFEF",
+//     },
+//     pear: {
+//       main: "#DCDC22",
+//     },
+//     egyptianBlue: {
+//       main: "#013994",
+//     },
+//     background: {
+//       default: "#222222",
+//       paper: "#222222",
+//     },
+//     text: {
+//       primary: "#FFFFFF",
+//       secondary: "#FFFFFF",
+//     },
+//   },
+// };
 
 const ThemeProvider = ({ children }) => {
   const [themeMode, setThemeMode] = useState(() => {
