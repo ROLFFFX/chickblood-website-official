@@ -38,7 +38,6 @@ function HomePage() {
     const preloadImages = async () => {
       try {
         await Promise.all(imageUrls.map((url) => loadImage(url)));
-
         setOpenLoader(false);
       } catch (error) {
         console.error("Error loading images:", error);
