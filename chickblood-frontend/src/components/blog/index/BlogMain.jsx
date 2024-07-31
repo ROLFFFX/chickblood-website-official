@@ -27,7 +27,6 @@ export default function BlogMain() {
   };
   /** Loader states and handle image preload */
   const [openLoader, setOpenLoader] = useState(true);
-
   const handleCloseLoader = () => {
     setOpenLoader(false);
   };

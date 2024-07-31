@@ -44,15 +44,17 @@ function Rig(props) {
 function Carousel({ radius = 1.4 }) {
   return (
     <>
+      {/* chiyokoo */}
       <Card
         key={0}
-        url="/pics/member/chiyokoo.png"
+        url="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/756898c5-9460-488f-c223-439abb929b00/public"
         position={[Math.sin(0) * radius, 0, Math.cos(0) * radius]}
         rotation={[0, Math.PI, 0]}
       />
+      {/* chzaza */}
       <Card
         key={1}
-        url="/pics/member/chzaza.png"
+        url="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/5716223e-2100-4e46-dbba-319b40a8b800/public"
         position={[
           Math.sin(Math.PI / 3) * radius,
           0,
@@ -60,9 +62,10 @@ function Carousel({ radius = 1.4 }) {
         ]}
         rotation={[0, Math.PI + Math.PI / 3, 0]}
       />
+      {/* joshua */}
       <Card
         key={2}
-        url="/pics/member/joshua.png"
+        url="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/93d19096-0aae-4f72-1ab0-b03d10e59c00/public"
         position={[
           Math.sin((2 * Math.PI) / 3) * radius,
           0,
@@ -70,15 +73,17 @@ function Carousel({ radius = 1.4 }) {
         ]}
         rotation={[0, Math.PI + (2 * Math.PI) / 3, 0]}
       />
+      {/* rita */}
       <Card
         key={3}
-        url="/pics/member/rita.png"
+        url="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/e3848fa4-faae-4bf6-ebe8-7ca438f68000/public"
         position={[Math.sin(Math.PI) * radius, 0, Math.cos(Math.PI) * radius]}
         rotation={[0, Math.PI + Math.PI, 0]}
       />
+      {/* rolf */}
       <Card
         key={4}
-        url="/pics/member/rolf.png"
+        url="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/f2064d80-c241-4aab-bf4a-2e279c774000/public"
         position={[
           Math.sin((4 * Math.PI) / 3) * radius,
           0,
@@ -86,9 +91,10 @@ function Carousel({ radius = 1.4 }) {
         ]}
         rotation={[0, Math.PI + (4 * Math.PI) / 3, 0]}
       />
+      {/* tzuchi */}
       <Card
         key={5}
-        url="/pics/member/tzuchi.png"
+        url="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/f4b8e394-bd5a-47f9-917f-3c4e6a925800/public"
         position={[
           Math.sin((5 * Math.PI) / 3) * radius,
           0,
