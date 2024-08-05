@@ -23,6 +23,7 @@ export const TRANSLATION_JPN = {
   // themse
   toggle_mode: "昼/夜モード",
   // issues - dummy
+  generationalBruise: "世代の傷痕",
   issue1: "ISSUE #1 - 世代の傷痕",
   issuedummy: "ISSUE #N - 仮タイトル",
   index: "目録",
@@ -35,6 +36,7 @@ export const TRANSLATION_JPN = {
   backtoblog: "ブログに戻る",
   linkcopied: "リンクがクリップボードにコピーされました",
   // contact page - email
+  clicktocontact: "お問い合わせはこちら",
   sendusemail: "メールを送る",
   yourname: "あなたの名前",
   youremail: "あなたのメール",

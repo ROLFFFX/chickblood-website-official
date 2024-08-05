@@ -8,6 +8,7 @@ import useWindowSize from "../../hooks/useWindowSize";
 import CBAppBar from "../../utils/CBAppBar";
 import LoadingPage from "../../utils/LoadingPage";
 import EmailModal from "./EmailModal";
+import { useTranslation } from "react-i18next";
 
 // cloudfare images preload
 const imageUrls = [
@@ -39,6 +40,7 @@ const imageUrls = [
 export default function ContactMain() {
   const useFont = useFontFamily();
   const sceneRef = useRef(null);
+  const { t } = useTranslation();
   const { width, height } = useWindowSize();
   const { themeMode } = useContext(ThemeContext);
   const [openLoader, setOpenLoader] = useState(true);
@@ -465,7 +467,7 @@ export default function ContactMain() {
           {/* This Box is for clicking and open the email sender */}
           <Box p={2}>
             <Typography sx={{ fontFamily: useFont.bold, fontSize: 25 }}>
-              Click to Contact
+              {t("clicktocontact")}
             </Typography>
           </Box>
         </Box>

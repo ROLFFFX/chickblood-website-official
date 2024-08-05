@@ -23,6 +23,7 @@ export const TRANSLATION_CHN = {
   // theming
   toggle_mode: "白天/黑夜模式",
   // issues - dummy
+  generationalBruise: "时代擦伤",
   issue1: "ISSUE #1 - 时代擦伤",
   issuedummy: "ISSUE #N - 占位标题",
   index: "目录",
@@ -35,6 +36,7 @@ export const TRANSLATION_CHN = {
   backtoblog: "返回博客",
   linkcopied: "链接已复制到剪贴板",
   // contact page - email
+  clicktocontact: "点击以联系我们",
   sendusemail: "给我们发送电子邮件",
   yourname: "你的名字",
   youremail: "你的邮箱",

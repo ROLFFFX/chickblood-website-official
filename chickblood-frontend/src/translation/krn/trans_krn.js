@@ -23,6 +23,7 @@ export const TRANSLATION_KRN = {
   // themse
   toggle_mode: "낮/밤 모드",
   // issues - dummy
+  generationalBruise: "세대상처",
   issue1: "ISSUE #1 - 세대상처",
   issuedummy: "ISSUE #N - 가제목",
   index: "색인",
@@ -35,6 +36,7 @@ export const TRANSLATION_KRN = {
   backtoblog: "블로그로돌아가기",
   linkcopied: "링크가 클립보드에 복사되었습니다",
   // contact page - email
+  clicktocontact: "문의하기",
   sendusemail: "이메일 보내기",
   yourname: "이름",
   youremail: "이메일",

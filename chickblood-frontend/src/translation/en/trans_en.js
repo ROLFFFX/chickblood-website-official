@@ -23,6 +23,7 @@ export const TRANSLATION_EN = {
   // themse
   toggle_mode: "Light/Dark Theme",
   // issues - dummy
+  generationalBruise: "Generational Bruise",
   issue1: "ISSUE #1 - Generational Bruise",
   issuedummy: "ISSUE #N - Dummy Title",
   index: "Index",
@@ -38,6 +39,7 @@ export const TRANSLATION_EN = {
   backtoblog: "Back to Blogs",
   linkcopied: "Link has been copied to clipboard!",
   // contact page - email
+  clicktocontact: "Click to Contact",
   sendusemail: "Send us an Email",
   yourname: "Your Name",
   youremail: "Your Email",

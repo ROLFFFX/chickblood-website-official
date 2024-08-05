@@ -1,19 +1,23 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import CBAppBar from "../../../utils/CBAppBar";
 import LanguageIcon from "../../../utils/LanguageIcon";
 import LoadingPage from "../../../utils/LoadingPage";
 import { useNavigate } from "react-router-dom";
+import useFontFamily from "../../../hooks/useFontFamily";
+import { useTranslation } from "react-i18next";
 
 const imageUrls = [
-  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/65b99df8-9b51-44c1-492a-4a8f91e12f00/public",
-  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/6b68130c-9a2b-40bb-b971-ddb32b99b200/public",
-  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/96d5ae81-cfb3-4e45-5687-ae04972f8800/public",
-  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/18bd550e-a03d-437b-29b7-fc2f99fc3a00/public",
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/65b99df8-9b51-44c1-492a-4a8f91e12f00/public", // blog背景草莓
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/6b68130c-9a2b-40bb-b971-ddb32b99b200/public", // back btn
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/96d5ae81-cfb3-4e45-5687-ae04972f8800/public", // blog icon
+  "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/18bd550e-a03d-437b-29b7-fc2f99fc3a00/public", // basket pic
 ];
 
 export default function BlogMain() {
+  const useFont = useFontFamily();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   // true: basket, false: index
   const [basket, setBasket] = useState(true);
@@ -138,6 +142,8 @@ export default function BlogMain() {
               marginTop: "-10%",
               marginLeft: "40%",
               transformOrigin: "center",
+              textAlign: "center",
+              rotate: 12,
             }}
             onClick={() => {
               navigate("/blog/genbruise");
@@ -151,6 +157,9 @@ export default function BlogMain() {
                 width: "300px",
               }}
             ></img>
+            <Typography sx={{ fontFamily: useFont.bold }}>
+              {t("issue1")}
+            </Typography>
           </motion.div>
         </Box>
       </Box>
