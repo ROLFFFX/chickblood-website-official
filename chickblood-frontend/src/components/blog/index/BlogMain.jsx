@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import CBAppBar from "../../../utils/CBAppBar";
@@ -7,6 +7,7 @@ import LoadingPage from "../../../utils/LoadingPage";
 import { useNavigate } from "react-router-dom";
 import useFontFamily from "../../../hooks/useFontFamily";
 import { useTranslation } from "react-i18next";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const imageUrls = [
   "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/65b99df8-9b51-44c1-492a-4a8f91e12f00/public", // blog背景草莓
@@ -20,6 +21,7 @@ export default function BlogMain() {
   const useFont = useFontFamily();
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { width } = useWindowSize();
   // true: basket, false: index
   const [basket, setBasket] = useState(true);
 
@@ -92,12 +94,25 @@ export default function BlogMain() {
           onClick={handleCloseBasket}
           style={{ transformOrigin: "center" }}
         >
-          <img
-            src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/18bd550e-a03d-437b-29b7-fc2f99fc3a00/public"
-            alt="basket"
-            height="300px"
-            width="auto"
-          />
+          {width > 500 ? (
+            <div>
+              <img
+                src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/18bd550e-a03d-437b-29b7-fc2f99fc3a00/public"
+                alt="basket"
+                height="300px"
+                width="auto"
+              />
+            </div>
+          ) : (
+            <div>
+              <img
+                src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/18bd550e-a03d-437b-29b7-fc2f99fc3a00/public"
+                alt="basket"
+                height="200px"
+                width="auto"
+              />
+            </div>
+          )}
         </motion.div>
       </Box>
     </Box>
@@ -111,74 +126,161 @@ export default function BlogMain() {
     >
       {/* app bar */}
       <CBAppBar />
-      {/* blog back icon */}
-      <Box width={"100%"} height={"calc(100% - 130px)"}>
-        <motion.div
-          initial={{ scale: 1 }}
-          whileHover={{ scale: 1.2 }}
-          onClick={handleOpenBasket}
-          style={{ width: "340px", transformOrigin: "center" }}
-        >
-          <img
-            src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/6b68130c-9a2b-40bb-b971-ddb32b99b200/public"
-            alt="blog icon"
-            height="80px"
-            width="auto"
-          />
-          <img
-            src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/96d5ae81-cfb3-4e45-5687-ae04972f8800/public"
-            alt="blog icon"
-            height="250px"
-            width="auto"
-          />
-        </motion.div>
-        {/* generational bruise */}
-        <Box width={"100%"}>
+      {width > 500 ? (
+        // desktop view
+        <Box>
+          {/* blog back icon */}
+          <Box width={"100%"} height={"calc(100% - 130px)"}>
+            <motion.div
+              initial={{ scale: 1 }}
+              whileHover={{ scale: 1.2 }}
+              onClick={handleOpenBasket}
+              style={{ width: "340px", transformOrigin: "center" }}
+            >
+              <img
+                src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/6b68130c-9a2b-40bb-b971-ddb32b99b200/public"
+                alt="blog icon"
+                height="80px"
+                width="auto"
+              />
+              <img
+                src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/96d5ae81-cfb3-4e45-5687-ae04972f8800/public"
+                alt="blog icon"
+                height="250px"
+                width="auto"
+              />
+            </motion.div>
+            {/* generational bruise */}
+            <Box width={"100%"}>
+              <motion.div
+                whileHover={{
+                  scale: 1.2,
+                }}
+                style={{
+                  position: "absolute",
+                  marginTop: "-10%",
+                  marginLeft: "40%",
+                  transformOrigin: "center",
+                  textAlign: "center",
+                  rotate: 12,
+                }}
+                onClick={() => {
+                  navigate("/blog/genbruise");
+                }}
+              >
+                <img
+                  src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/db64d861-5f6c-434d-4ce1-eaa048fbc600/public"
+                  alt="generational bruise"
+                  style={{
+                    height: "auto",
+                    width: "300px",
+                  }}
+                ></img>
+                <Typography sx={{ fontFamily: useFont.bold }}>
+                  {t("issue1")}
+                </Typography>
+              </motion.div>
+            </Box>
+          </Box>
+          {/* Language Icon */}
           <motion.div
             whileHover={{
               scale: 1.2,
             }}
             style={{
               position: "absolute",
-              marginTop: "-10%",
-              marginLeft: "40%",
+              bottom: "5%",
+              left: "3%",
               transformOrigin: "center",
-              textAlign: "center",
-              rotate: 12,
-            }}
-            onClick={() => {
-              navigate("/blog/genbruise");
             }}
           >
-            <img
-              src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/db64d861-5f6c-434d-4ce1-eaa048fbc600/public"
-              alt="generational bruise"
-              style={{
-                height: "auto",
-                width: "300px",
-              }}
-            ></img>
-            <Typography sx={{ fontFamily: useFont.bold }}>
-              {t("issue1")}
-            </Typography>
+            <LanguageIcon></LanguageIcon>
           </motion.div>
         </Box>
-      </Box>
+      ) : (
+        // mobile view
+        <Box>
+          {/* blog back icon */}
+          <Box width={"100%"} height={"calc(100% - 130px)"}>
+            <div
+              onClick={handleOpenBasket}
+              style={{
+                width: "122px",
+                transformOrigin: "center",
+              }}
+            >
+              <Grid container direction="row">
+                <Grid
+                  item
+                  xs={2}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/6b68130c-9a2b-40bb-b971-ddb32b99b200/public"
+                    alt="blog icon"
+                    height="20px"
+                    width="auto"
+                  />
+                </Grid>
+                <Grid item xs={10}>
+                  {" "}
+                  <img
+                    src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/96d5ae81-cfb3-4e45-5687-ae04972f8800/public"
+                    alt="blog icon"
+                    height="100px"
+                    width="auto"
+                  />
+                </Grid>
+              </Grid>
+            </div>
+            {/* generational bruise */}
+            <Box
+              width={"100%"}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
+              <motion.div
+                style={{
+                  position: "absolute",
 
-      {/* Language Icon */}
-      <motion.div
-        whileHover={{
-          scale: 1.2,
-        }}
-        style={{
-          position: "absolute",
-          bottom: "5%",
-          left: "3%",
-          transformOrigin: "center",
-        }}
-      >
-        <LanguageIcon></LanguageIcon>
-      </motion.div>
+                  transformOrigin: "center",
+                  textAlign: "center",
+                  rotate: 12,
+                }}
+                onClick={() => {
+                  navigate("/blog/genbruise");
+                }}
+              >
+                <img
+                  src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/db64d861-5f6c-434d-4ce1-eaa048fbc600/public"
+                  alt="generational bruise"
+                  style={{
+                    height: "auto",
+                    width: "200px",
+                    marginTop: "20%",
+                  }}
+                ></img>
+                <Typography sx={{ fontFamily: useFont.bold }}>
+                  {t("issue1")}
+                </Typography>
+              </motion.div>
+            </Box>
+          </Box>
+          {/* Language Icon */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: "5%",
+              left: "3%",
+              transformOrigin: "center",
+            }}
+          >
+            <LanguageIcon></LanguageIcon>
+          </div>
+        </Box>
+      )}
     </Box>
   );
 }
