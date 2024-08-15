@@ -121,9 +121,13 @@ function HomePage() {
             }}
           >
             <motion.div
-              whileHover={{
-                scale: 1.1,
-                transition: { ease: "easeOut", duration: 0.2 },
+              animate={{
+                scale: [0.9, 1.1, 0.9],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
               }}
               style={{
                 display: "inline-block",

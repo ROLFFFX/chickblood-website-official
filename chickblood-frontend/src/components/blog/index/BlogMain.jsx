@@ -104,14 +104,23 @@ export default function BlogMain() {
               />
             </div>
           ) : (
-            <div>
+            <motion.div
+              animate={{
+                scale: [0.9, 1.1, 0.9],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
               <img
                 src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/18bd550e-a03d-437b-29b7-fc2f99fc3a00/public"
                 alt="basket"
                 height="200px"
                 width="auto"
               />
-            </div>
+            </motion.div>
           )}
         </motion.div>
       </Box>
@@ -244,13 +253,20 @@ export default function BlogMain() {
               <motion.div
                 style={{
                   position: "absolute",
-
                   transformOrigin: "center",
                   textAlign: "center",
                   rotate: 12,
                 }}
                 onClick={() => {
                   navigate("/blog/genbruise");
+                }}
+                animate={{
+                  scale: [0.9, 1.1, 0.9],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
                 }}
               >
                 <img

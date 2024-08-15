@@ -11,6 +11,7 @@ import "./translation/i18n";
 import CustomCursor from "./utils/CustomCursor";
 import { Box } from "@mui/material";
 import LandingPage from "./components/LandingPage";
+import EventCalendar from "./components/events/EventCalendar";
 
 function Layout({ children }) {
   return (
@@ -29,11 +30,11 @@ export default function App() {
           <Route path="/member" element={<MemberPage />} />
           <Route path="/blog" element={<BlogMain />} />
           <Route path="/contact" element={<ContactMain />} />
-
-          <Route path="/blog/genbruise" element={<GenerationalBruise />} />
         </Route>
         <Route path="/home" element={<HomePage />} />
         <Route path="/eventhome" element={<EventHome />} />
+        <Route path="/eventcalendar" element={<EventCalendar />} />
+        <Route path="/blog/genbruise" element={<GenerationalBruise />} />
       </Routes>
     </React.Fragment>
   );

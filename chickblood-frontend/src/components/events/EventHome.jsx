@@ -5,6 +5,7 @@ import CBAppBar from "../../utils/CBAppBar";
 import LoadingPage from "../../utils/LoadingPage";
 import useWindowSize from "../../hooks/useWindowSize";
 import CustomCursor from "../../utils/CustomCursor";
+import { useNavigate } from "react-router-dom";
 
 const imageUrls = [
   "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/7d4373f1-32e4-49aa-3f58-21390b23e400/public", // bg img
@@ -15,6 +16,7 @@ const imageUrls = [
 ];
 
 export default function EventHome() {
+  const navigate = useNavigate();
   const { width } = useWindowSize();
   /** Loader states and handle image preload */
   const [openLoader, setOpenLoader] = useState(true);
@@ -88,6 +90,9 @@ export default function EventHome() {
               zIndex: 2,
               overflow: "visible",
             }}
+            onClick={() => {
+              navigate("/eventcalendar");
+            }}
           >
             <img
               src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/10c5b2cc-00d0-4441-72d0-c066c03ddc00/public"
@@ -160,7 +165,7 @@ export default function EventHome() {
             />
           </Box>
           {/* ruanmuban */}
-          <div
+          <motion.div
             style={{
               position: "relative",
               width: "100%",
@@ -169,6 +174,17 @@ export default function EventHome() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+            }}
+            onClick={() => {
+              navigate("/eventcalendar");
+            }}
+            animate={{
+              scale: [0.9, 1.1, 0.9],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
           >
             <img
@@ -182,7 +198,7 @@ export default function EventHome() {
                 objectFit: "contain",
               }}
             />
-          </div>
+          </motion.div>
           {/* event icon and guizi */}
           <Grid container sx={{ height: "45%" }}>
             {/* guizi */}

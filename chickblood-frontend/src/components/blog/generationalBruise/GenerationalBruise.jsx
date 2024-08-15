@@ -4,11 +4,13 @@ import useFontFamily from "../../../hooks/useFontFamily";
 import CustomCursor from "../../../utils/CustomCursor";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 export default function GenerationalBruise() {
   const useFont = useFontFamily();
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const { width } = useWindowSize();
   return (
     <div
       style={{
@@ -19,7 +21,8 @@ export default function GenerationalBruise() {
         flexDirection: "column",
       }}
     >
-      <CustomCursor></CustomCursor>
+      {width > 500 ? <CustomCursor></CustomCursor> : <></>}
+
       {/* Top Nav Box */}
       <Box
         sx={{

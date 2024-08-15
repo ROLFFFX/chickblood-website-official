@@ -51,7 +51,7 @@ function CBAppBar() {
     preloadImages();
   }, []);
   return (
-    <Box sx={{ minHeight: "100px" }}>
+    <Box sx={{ minHeight: "100px", zIndex: 1000 }}>
       <AppBar position="static" elevation={0}>
         <Container
           sx={{

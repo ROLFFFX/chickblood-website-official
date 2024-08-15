@@ -162,7 +162,7 @@ export default function ContactMain() {
       },
     });
     const twitter = Bodies.rectangle(width / 2 + 50, 0, 50, 50, {
-      label: "https://www.instagram.com/chickblooood/",
+      label: "https://x.com/Chickblo0o0d",
       restitution: 0.7,
       density: 0.5,
       render: {
@@ -248,7 +248,7 @@ export default function ContactMain() {
       tray_right,
     ]);
 
-    World.add(engine.world, [tiktok, insta, youtube, twitter, discord, xhs]);
+    World.add(engine.world, [tiktok, insta, youtube, twitter, xhs]); // discord to be added
 
     const mouse = Matter.Mouse.create(render.canvas);
     const mouseConstraint = Matter.MouseConstraint.create(engine, {
@@ -320,9 +320,9 @@ export default function ContactMain() {
         <img
           src="https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/c0ae9886-e48e-496f-88f8-a59461f44300/public"
           alt="contact bg"
-          height={height - 130}
+          height={height + 200}
           width={width}
-          style={{ position: "absolute", zIndex: -100 }}
+          style={{ position: "absolute", zIndex: -100, marginTop: -100 }}
         ></img>
         {width > 900 && (
           <div>
