@@ -49,81 +49,81 @@ export const TRANSLATION_EN = {
   iconDesigner: "Icon Designer",
   artDirector: "Art Director",
   webdev: "Web Dev",
-  yehoshua: `Issue 1: 小智
-  
-世代擦伤的第一个采访者是小智，他是Chickblood的成员之一，同时也是今年毕业的本科应届生。这个夏天，他在刚刚经历了美国校园抗议潮下仓促的毕业典礼，感受着社会稳定性急转直下和迷茫的就业环境。
+  yehoshua: `Issue 1: Xiaozhi
 
-他的留学路，从疫情开始，抗议结束。
-        
-Q：可以简单介绍一下自己和现在的状态么？
+The first interviewee of "Generational Scars" is Xiaozhi. He is a member of Chickblood and a fresh undergraduate graduate this year. This summer, he just went through a hasty graduation ceremony amid the wave of campus protests in the United States, experiencing a sharp decline in social stability and a confusing job market.
 
-A：我是小智，现在22岁，这个月刚刚从Emory 毕业，专业是工商管理+心理学+语言学。咨询行业全职offer在毕业前一个多月突然因为国际生身份问题被撤掉，现在一边体验生活一边找工作，一边思考下一步面对我的会是什么。
+His journey as an international student began with the pandemic and ended with protests.
 
-Q：你可以描述一下你的peer pressure么？
+Q: Can you briefly introduce yourself and your current situation?
 
-A：我觉得peer pressure更多来自对自己定位和未来的不清晰，而不是简单的来自他者。我初高中时就是个很特别的人，我知道自己特别，也从来不把自己和别人放到一个赛道或者维度去比。所以初高中时我永远在自己的节奏里面，只有自己的内驱力，没太有什么peer pressure。但现在这个不安的时代和自己被打乱的计划仿佛又让我对自己想要的东西和定位变得有些模糊，又感受到从各方而来的压力和焦虑。希望自己可以再次慢慢找准自己的定位，知道where u come from where u want to go 那你就在自己的赛道，没人能跟你竞争。
+A: I’m Xiaozhi, 22 years old. I just graduated from Emory University this month, majoring in Business Administration, Psychology, and Linguistics. A full-time consulting offer I received was suddenly revoked over a month before graduation due to my international student status. Now, I’m experiencing life while looking for a job and thinking about what’s next for me.
 
-Q：你觉得现在你所处的时代对你来说是机会更多，还是限制更多？它对你的影响会偏向消极还是积极？你对它还是抱有期待的么？
+Q: Can you describe your peer pressure?
 
-A：现在就是被迫失业期 每天都在也有点新的思考和想法 但感觉也很犬儒 没办法去真正做到什么。我觉得传统计划和机会肯定是更少更不稳定的，比如我大学其实一直给自己的职业规划是consulting，也一直在做这方面的实习准备和积累，结果因为疫情和美国经济这整个consulting行业直接完蛋，我network的公司三年来一半都不再招人或者半破产倒闭状态，最后好不容易拿到的全职offer也在毕业前一个多月被撤掉。真的挺崩溃的，感觉在这个时代下所谓努力和规划，甚至能力，都不能保证能让我抓住些什么。之前感觉有些不知道以前拼死拼活到现在这个德行到底是为了什么。从另外一个角度来说，这个不安的时代给了我一些在不安中发现非常规的机会的可能性。我忘了从哪听来的，反正有句话是说海上的风暴让我学不会游泳，但是让我意外学会冲浪。我感觉以前的积累包括现在这个环境下的经历虽然都是伤痕，但也让我更知道自己是谁，自己由什么构成，还有这个时代给我来了什么。我会在这个动荡中去尝试探索一些我没有考虑过的方向，一些我之前想去做但是没勇气做的事，一些只有这个时代才可以去做的事。所以我也希望这个时代能给我一些勇气去抛开以前的计划和条框去打开一些自己新的可能性吧，希望是这样。
+A: I think peer pressure mostly comes from an unclear understanding of my identity and future, rather than simply from others. In middle and high school, I was always a unique person. I knew I was special and never compared myself to others on the same track or dimension. So, during middle and high school, I was always in my own rhythm, driven only by my inner motivation, without much peer pressure. But now, in this uncertain era and with my disrupted plans, I seem to have become a bit confused about what I want and my identity. I also feel pressure and anxiety from all sides. I hope I can slowly find my position again, know where I come from and where I want to go, so that I can be on my own track and have no one to compete with.
 
-Q：可以问问你，你在前几年有预感到会有这样的事情发生么？在求职上，因为感觉从疫情时代开始一直都在听说求职难。
+Q: Do you think the current era you are in brings you more opportunities or more restrictions? Is its impact on you more negative or positive? Do you still have expectations for it?
 
-A：前几年我知道求职难，会有挑战性，但我觉得我能力够，愿意多付出一些的情况下我是愿意去挑战的。但我没想到会越来越完蛋，就是各种意义各个方面上的完蛋。我逐渐意识到其实这个挑战不是用能力和意志可以克服的，是很多不确定性构成的。比如，我被撤offer不是因为能力或者任何我可控的因素，是仅仅因为公司今年不愿意sponsor国际身份。这个是我没法改变 刻在我身上的伤痛，我只能带着他走。
+A: Right now, I’m in a period of forced unemployment. Every day brings new thoughts and ideas, but I also feel quite cynical and unable to really achieve anything. I think traditional plans and opportunities are certainly fewer and more unstable. For example, my career plan in college was always consulting, and I was constantly preparing for and accumulating experience in this field. However, due to the pandemic and the U.S. economy, the entire consulting industry collapsed. Half of the companies in my network haven’t been hiring or are half bankrupt. The full-time offer I finally got was also revoked more than a month before graduation. It’s really frustrating. It feels like, in this era, effort, planning, and even ability cannot guarantee that I can grasp anything. Previously, I felt unsure about what all the hard work and efforts over the years were for. On the other hand, this uncertain era has given me some opportunities to discover unconventional possibilities. I forgot where I heard it, but there’s a saying: "A storm at sea didn’t teach me to swim, but it unexpectedly taught me to surf." I feel that the past accumulation, including the experiences in the current environment, although they are scars, have also made me understand more about who I am, what I am made of, and what this era has brought to me. I will try to explore some directions I hadn’t considered before in this turbulent time, things I wanted to do before but didn’t have the courage to, things that only this era allows me to do. So, I hope this era can give me some courage to let go of previous plans and frameworks and open up some new possibilities for myself. I hope so.
 
-Q：所以你觉得你的国籍是有给你带来限制的对么？
+Q: Can I ask if you had any premonition that such things would happen a few years ago? Regarding job hunting, because it seems like we’ve been hearing about the difficulty of finding a job since the pandemic started.
 
-A：肯定是有的 但不全是。我在朋友家做一个take home coding 面试，做了十几个小时，后面崩溃了，和他说我做不下去了，我要回家睡觉，我打算放弃了。然后回家大哭，回去冥想祷告。第二天醒来感觉还是不能气馁，要把握住每一个机会，要坚韧一些，结果第二天又花了一整天居然把它做完了，发给了面试官，然后通过了，晋级了最终一轮面试，那个时候还很自豪，感觉自己很有毅力，做到了自己觉得做不到的事。结果下一周最终面试当天公司发来邮件，因为公司政策原因打算取消所有国际生身份，之后可能需要工作签证的学生的面试，哈哈，xxx的。
+A: A few years ago, I knew that job hunting would be difficult and challenging, but I thought that if I had enough ability and was willing to put in more effort, I would be willing to take on the challenge. But I didn’t expect things to get worse and worse, failing in every sense and in every aspect. I gradually realized that this challenge couldn’t be overcome by ability and willpower alone; it was made up of many uncertainties. For example, my offer was revoked not because of my ability or any factors I could control, but simply because the company didn’t want to sponsor international visas this year. This is something I can’t change—a scar engraved on me that I can only carry with me.
 
-Q：你有没有想过离开美国呢？
+Q: So do you think your nationality has brought limitations to you?
 
-A：我其实一直也不觉得我会永远在美国，其实挺向往日本的，包括香港什么的也有考虑，但是在这个阶段我还是觉得更像在美国发展，把学到的东西apply在这里，体验这里的生活。
+A: It definitely has, but not entirely. I was doing a take-home coding interview at a friend’s house, working for over ten hours. I broke down and told him I couldn’t continue; I was going home to sleep, and I planned to give up. Then I went home and cried, meditated, and prayed. The next day, I felt I couldn’t be discouraged and needed to seize every opportunity and be resilient. So, I spent another whole day and managed to finish it, sent it to the interviewer, passed, and made it to the final round. At that time, I was proud, feeling that I had great perseverance and did something I thought I couldn’t do. But the next week, on the day of the final interview, the company sent an email saying that due to company policy, they were canceling interviews for all international students who might need work visas in the future. Haha, what the hell.
 
-Q：你应该不是最近才开始求职的，是早就在开始准备找工作。现在留在美国是你唯一的选择么？
+Q: Have you thought about leaving the United States?
 
-A：我说实话从两年前就没太停下过找工作和实习，大二投实习，大三大四投全职。我目前的打算是趁着身份还没过期，这个假期（其实不是假期，已经失业笑死）先在美国这边一边工作一边体验生活，去一些不同的地方城市去一边感受一边思考一下自己想要的东西，也一边面试找工作。但同时也跟家人商量过，不行的话就gap一年，申请明年的研究生，因为靠我的成绩说实话研究生可以申请到很好的学校，但这样的话我更需要去想一想到底要读什么，要不要改变方向，还有这个gap的时候要做什么。
+A: I never really thought I would stay in the U.S. forever. I’ve actually been quite interested in Japan, and I’ve also considered places like Hong Kong. But at this stage, I still feel like I want to develop in the U.S., apply what I’ve learned here, and experience life here.
 
-Q：我可以问问你是多久去的美国么？
+Q: You probably didn’t just start looking for a job recently; you’ve been preparing for a while. Is staying in the U.S. your only option now?
 
-A：我是21年到的美国，在国内上了一年网课，到学校的时候已经是大二。
+A: To be honest, I haven’t really stopped looking for jobs and internships for the past two years—applying for internships in sophomore year and full-time jobs in junior and senior years. My current plan is to, while my visa hasn’t expired, spend this "vacation" (actually, it’s not a vacation—I’m already unemployed, haha) working and experiencing life in different cities in the U.S., feeling and thinking about what I want, and at the same time interviewing and looking for jobs. But I’ve also discussed with my family that if it doesn’t work out, I might take a gap year and apply for graduate school next year. Honestly, with my grades, I can get into a good school for grad school, but I need to think more about what to study, whether to change directions, and what to do during the gap year.
 
-Q：疫情爆发的时候你还在申请阶段么？可以问问你那时候的心态么。
+Q: Can I ask how long you’ve been in the U.S.?
 
-A：好像是在申请阶段和拿到offer之间？记不太住了，当时是办不了美签，所以也在考虑gap还是online上一年，gap的话当时觉得变数会很大，最后选择了online上学。当时觉得未来很扑朔迷离，不知道这阵风会带自己去哪里，但感觉还是有信心去figure it out。其实和现在的心态也有点异曲同工，现在虽然这样，面前全是不确定性，但我也其实没有绝望，还是在试着享受这些随机性和不确定性带来的种种情绪和机会
+A: I came to the U.S. in 2021, attended online classes in China for a year, and by the time I got to campus, it was already my sophomore year.
 
-Q：上网课的时候也没有觉得有可能会去不了美国么？20年的舆论方向不是很倾向封闭么，你当时有想过如果去不了怎么办么？那时候你身边人是不是很多都和你处于一个状态里，你现在觉得那时候大家有做什么事情去缓解这种焦虑么，除了网课/gap。
+Q: Were you still in the application stage when the pandemic broke out? Can I ask what your mindset was back then?
 
-A：有的，当时真的看不到头，不知道这个混乱状态什么时候会结束，最后办下签证飞走之后，我也没觉得这个状态结束了，只是我逃离了。其实我感觉我是个适应性很强的人，当时因为20年online的时候，我在这个时间里做了很多我之前没想过的事，体验了很多让我很感动的东西和经历，包括有尝试和朋友们做一些自己觉得可能能赚钱的项目之类啊，哈哈哈，还有跟他们一起搞乐队，写写歌。虽然那个时候搞的东西和状态都很傻逼，但是那段时间真的很有冲劲，是一段改变我人生的很有意思的经历，让我之前只是从喜欢音乐到相信自己可以去做一些自己喜欢的音乐，把输入变成输出并且能真的表达自己的情绪，也感动到别人。所以回到这个问题，我觉得就算明年还是去不了美国，感觉也会活的很有意思，在这个特殊的时间。
+A: I think I was between the application stage and receiving an offer? I can’t really remember. At that time, I couldn’t get a U.S. visa, so I was considering whether to take a gap year or attend online classes for a year. If I took a gap year, I felt there would be a lot of uncertainties, so I chose to study online. Back then, I felt the future was very uncertain; I didn’t know where the wind would take me, but I still had confidence to figure it out. Actually, my mindset now is quite similar. Even though things are like this, with nothing but uncertainty in front of me, I’m not in despair. I’m still trying to enjoy the emotions and opportunities brought by randomness and uncertainty.
 
-Q：所以其实相对来说，20年的日子过得还不错对不对？
+Q: When you were attending online classes, didn’t you think there might be a possibility that you wouldn’t be able to go to the U.S.? In 2020, the public opinion seemed to lean towards closure. Did you think about what to do if you couldn’t go? At that time, many people around you were probably in the same situation. Do you think everyone did something to alleviate this anxiety, besides online classes or taking a gap year?
 
-A：挺不错，是跟很动荡的时期。但是真的让我感受和经历到了一些我从来都没有经历到的东西，我也在用那段时间勉励自己的现在。感觉看不到下一步 很崩溃和焦虑 但是we gon be alright 。
+A: Yes, at that time, we couldn’t see the end of it and didn’t know when this chaotic state would end. After finally getting the visa and flying away, I didn’t feel like that state had ended; I just escaped. I feel like I’m very adaptable. During the online period in 2020, I did many things I hadn’t thought of before, experienced many things that moved me deeply, like trying to start projects with friends that we thought might make money, haha, and forming a band, writing songs. Even though the things and state back then were quite silly, that period was very energetic, and it was an interesting experience that changed my life. It took me from just liking music to believing I could make music I love, turn inputs into outputs, and truly express my emotions and move others. So, to return to the question, I think even if I still couldn’t go to the U.S. next year, I would still have a meaningful life in this special time.
 
-Q：所以其实疫情大爆发相对来说对你求学之路影响没有那么大？
+Q: So, relatively speaking, you had a pretty good time in 2020, right?
 
-A：我觉得客观来说肯定是有很大影响的，包括失去freshman year，少了一年在美国的经历和认识人的机会，到影响现在的工作环境，但是主观来说我很感谢那年的经历和机会，是我觉得很神奇的一年。
+A: It was quite good, considering it was during a turbulent period. But it really allowed me to feel and experience things I had never experienced before, and I’m using that time to encourage myself now. It feels like I can’t see the next step, feeling overwhelmed and anxious, but we gon’ be alright.
 
-Q：因为你可能刚好多了一些时间可以去找自己的热情和一些没有接触过的事情。那么21年到美国之后，你觉得你的状态对比20年是往上走还是在一点一点的被打压下来？
+Q: So, in terms of your academic journey, the pandemic didn’t have that much of an impact on you, relatively speaking?
 
-A：我觉得是不一样的状态，来美国有认识新的人，感受整个文化和教育，又从在国内乱七八糟不知道在干什么到来美国忙了起来，学业和生活。
+A: Objectively speaking, it definitely had a big impact, like losing my freshman year, missing out on a year of experience in the U.S. and opportunities to meet people, and affecting the current job environment. But subjectively, I’m very grateful for the experiences and opportunities of that year. It was a magical year for me.
 
-Q：最近的抗议事件闹的沸沸扬扬，你最开始知道学校有人开始抗议的时候你有想过会变成现在这样么？
+Q: Because you probably had more time to find your passion and explore things you hadn’t touched before. So, after coming to the U.S. in 2021, do you think your state improved compared to 2020, or did it feel like you were being gradually suppressed?
 
-A：其实有预想到抗议的势头会越来大，但是完全没有预想到事情的走向，和大学以及上层的反应。最开始是去了解新闻，了解世界上正在发生的局势。再到看到校园里和身边人的反应和立场，以及逐渐亲身感受到这些事情对远在地球另一端的我们的影响，产生复杂的共情和反思。最后看到大规模抗议爆发，以及抗议如何被结构性暴力压制。当看到眼前无辜的教授同学们如何被身边的暴行镇压，就好像更能看到了处于战争的国家里面的民众和孩子如何被同样的一股统治阶级力量摧毁。 一切的一切仿佛又似曾相识，好像去年在我身边曾发生过，很多年前在爸妈身边也曾发生过。
+A: I think it’s a different state. Coming to the U.S., I met new people, experienced the culture and education, and went from being confused and aimless in China to being busy with academics and life here.
 
-Q：听说你前段时间的毕业典礼也有受到Protest的影响，可以讲讲当时是什么情况么？
+Q: The recent protests have been very intense. When you first heard that people were starting to protest at school, did you expect it to turn out like this?
 
-A：我的学校在毕业典礼前发生了很fucked up也很戏剧性的事件，首先是当支持巴勒斯坦的学生和faculty在学校草坪支起帐篷camping 抗议学校出资援助以色列军方。而校长声称抗议者是外部势力，并非学生，然后用这个理由请来州警察和市警察镇压抗议，而州警和市警一来事态完全失去控制，和平抗议的学生们被暴力拒捕，前来查看学生是否还好的教授被警察按倒在地，路过的学生被抱摔铐上手铐，警察拿着催泪弹和bb弹扫射校园和学生。数不清的学生，教授和教职人员受伤，被莫名拘捕，而抗议不会结束，只会由巴以问题转向共同抵抗校长和更高势力。学校全面停课转网课，校园内相关活动除毕业典礼外全部被取消转，学生和教授共同向校长发出不信任动议，毕业典礼也被迫转离校园。
+A: I did anticipate that the momentum of the protests would grow, but I had no idea about the direction things would take and how the university and the authorities would respond. Initially, it was about understanding the news and what was happening around the world. Then, seeing the reactions and stances of people on campus and around me, gradually feeling the impact of these events on us, far away on the other side of the globe, and developing complex empathy and reflection. Finally, seeing large-scale protests erupt and how they were suppressed by structural violence. Seeing how innocent professors and students around me were suppressed by the violence made me feel like I could see how the people and children in war-torn countries are destroyed by the same ruling forces. Everything seemed so familiar, as if it had happened around me last year, and many years ago around my parents.
 
-Q：过程中你自己或者身边人有参与过么？
+Q: I heard that your recent graduation ceremony was also affected by the protests. Can you tell us what the situation was like at that time?
 
-A：我一直属于一个近处的观察者的状态，但当我看到熟悉的教授在仅仅路过，关心学生安全时被州警察拽着头发按到水泥地上，看到自己教会的，每次我在诗班演出的时候都会来支持我们的非裔弟兄被警察用膝盖压住脖子，喊着we can do better than this，看到身边的中国朋友被从人群中拽出抱摔到草丛上被带上手铐时，我觉得战争不只在远方的以色列和巴勒斯坦，战争在我身边。
+A: Before the graduation ceremony, there were some very fucked up and dramatic events at my school. It started when pro-Palestinian students and faculty set up tents on the campus lawn to protest the school’s funding of the Israeli military. The president claimed that the protesters were outsiders and not students, and used this as a reason to call in state and city police to suppress the protests. When the state and city police arrived, things completely spiraled out of control. Peaceful protesters were violently arrested, professors who came to check on the students were pushed to the ground by the police, passing students were slammed down and handcuffed, and the police fired tear gas and rubber bullets at the campus and students. Countless students, professors, and staff were injured and inexplicably arrested. The protests would not end; they would just shift from the issue of Palestine and Israel to a united opposition against the president and higher authorities. The university suspended all classes and moved them online, all related activities on campus except for the graduation ceremony were canceled or moved, and students and professors jointly issued a vote of no confidence against the president. The graduation ceremony was also forced to move off-campus.
 
-Q：疫情之后，美国的左右撕裂好像越来越严重。作为传统自由大国，现在的言论环境急转直下。经历了这些之后，你如何看待「言论自由」。
+Q: Did you or anyone around you participate in the process?
 
-A：我一直认为美国是个特别割裂的国家，从种族，性别，阶级，地理和其他种种程度上的割裂。所谓传统自由大国，其实不同类别人经历的生活差别难以想象的大，而且这些割裂和隔离是难以跨越的结构性的牢笼，另外一种方式的不自由。尤其在看到抗议以及对抗议的镇压以后，言论自由又为何物？所以我以为我逃离了一个地方，而在颠沛流离过后定眼一看，好像又没有逃出任何地方。把这份割裂投射到自己身上的时候，作为一个东亚背景下成长，在青春期来到美国的男性，我没办法强迫自己变成任何不是我的样子，硬成为一个美国优越金融白男，或者底层街头黑人，或者LGBTQIA群体，但真的是我身上的东亚伤痕和我自己独特的经历成就了我，让我能对眼前所有发生的现象用自己的角度反思和产生不同程度的共鸣。 所以我觉得真的要正视伤痕和拥抱这个时代给我们带来的擦伤，去投入这个时代里去感受和挣扎。感觉不管是身份，出身，国家，东亚的教育背景，还是这些所有所有经历留下的伤痕，都变成了我的一部分，是我拿不走也脱不掉的东西。我对这些时代和文化烙印越愤怒，就越放不下。我不能去回避或者拒绝我的这部分。但是带着这些东西我才是我，正视这些需要勇气，但这些伤痕也都在现在和以后会成为我的纹身，让我知道我是我，让别人也看到我是特别的，是深刻的。
+A: I was always an observer, but when I saw familiar professors being pulled by their hair and pushed to the ground just for passing by and checking on the students, when I saw an African-American brother from my church who always came to support us when I performed in the choir being pinned down by the police with a knee on his neck, shouting "we can do better than this," and when I saw my Chinese friends being dragged out of the crowd and slammed into the bushes, then handcuffed, I felt like the war was not just in faraway Israel and Palestine. The war was right beside me.
 
-Q：在经历这一切的时候，你还会为自己的未来设立目标么，或者换一句话说，你对未来还有所期待么？
+Q: After the pandemic, the divide between the left and right in the U.S. seems to be getting worse. As a traditionally free country, the freedom of speech environment has taken a sharp turn. After experiencing all this, how do you view "freedom of speech"?
 
-A：我觉得这个时代和我的背景带给我的，是混乱，是不安，也是机会和思考。我的东亚身份与时代伤痕造成的combined experience和 perspective让我对自己的身份得到自洽，我依然会对世界愤怒，发声，失望，但这个角度不再是以前那个平面的痛恨和厌恶。是一个更立体的evaluation。对于自己来说，我现在也在正视自己的的过去和背景，what I am comprised of ，这个时代带给了我什么。正视这些需要勇气，但只有当正式这些之后，我才能尝试重塑自己的人格，虽然很难，很挣扎。但希望在这个时代我们可以继继续思考，继续流泪，继续愤怒。祝我们都继续挣扎，朋友。`,
+A: I’ve always thought that the U.S. is a particularly divided country, divided by race, gender, class, geography, and many other factors. The so-called traditional free country actually has a huge gap in the lives experienced by different categories of people, and these divisions and segregations are structural cages that are difficult to cross, another form of unfreedom. Especially after seeing the protests and the suppression of the protests, what is freedom of speech? So, I thought I had escaped from one place, but after wandering around, I realized I hadn’t escaped anywhere. When I project this division onto myself, as a male who grew up in an East Asian background and came to the U.S. during my adolescence, I can’t force myself to become anything I’m not, to become a privileged white male in finance, or a lower-class black man on the street, or an LGBTQIA person. But it’s really the East Asian scars on me and my unique experiences that make me who I am, allowing me to reflect on and empathize with all the phenomena happening before my eyes from my own perspective. So, I think we really need to face our scars and embrace the bruises that this era has brought us, to invest ourselves in this era, to feel and struggle. I feel that whether it’s identity, origin, nationality, East Asian educational background, or all the scars left by these experiences, they’ve all become a part of me, things I can’t take away or strip off. The angrier I am about these marks of the times and cultures, the harder it is to let them go. I can’t avoid or reject this part of myself. But with these things, I am who I am. Facing these takes courage, but these scars will also become my tattoos now and in the future, letting me know who I am and letting others see that I am special and profound.
+
+Q: After going through all this, do you still set goals for your future, or in other words, do you still have expectations for the future?
+
+A: I think what this era and my background have brought me is chaos, unease, but also opportunities and reflection. My East Asian identity combined with the scars of the times have given me a unique experience and perspective that allows me to reconcile with my identity. I still feel angry, speak out, and feel disappointed about the world, but this perspective is no longer the flat hatred and disgust I used to have; it’s a more three-dimensional evaluation. As for myself, I’m also facing my past and background, what I am comprised of, and what this era has brought me. Facing these requires courage, but only when I face them can I try to reshape my personality, even though it’s hard and a struggle. But I hope that in this era, we can continue to think, continue to cry, and continue to be angry. I wish we all continue to struggle, my friend.`,
 };

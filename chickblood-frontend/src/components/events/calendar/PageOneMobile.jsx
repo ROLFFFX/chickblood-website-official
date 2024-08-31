@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import LoadingPage from "../../../utils/LoadingPage";
+import { useNavigate } from "react-router-dom";
 
 const imageUrls = [
   "https://imagedelivery.net/luUTa6EFyOmipDilm9a3Jw/f5d051d1-dce7-4d22-2be1-d4edb587d500/public", //1
@@ -23,6 +24,7 @@ const imageUrls = [
 ];
 
 export default function PageOneMobile() {
+  const navigate = useNavigate();
   // Image preload
   const [openLoader, setOpenLoader] = useState(true);
   const handleCloseLoader = () => {
@@ -332,6 +334,9 @@ export default function PageOneMobile() {
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onClick={() => {
+          navigate("/dayone");
+        }}
       />
     </Box>
   );
