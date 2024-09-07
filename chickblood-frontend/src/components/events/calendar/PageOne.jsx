@@ -301,6 +301,9 @@ export default function PageOne() {
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onClick={() => {
+          navigate("/thatsmypo");
+        }}
       />
       {/* 1 */}
       <img

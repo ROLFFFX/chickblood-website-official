@@ -13,6 +13,7 @@ import { Box } from "@mui/material";
 import LandingPage from "./components/LandingPage";
 import EventCalendar from "./components/events/EventCalendar";
 import DayOne from "./components/events/eventPages/DayOne";
+import ThatsMyPoster from "./components/events/eventPages/ThatsMyPoster";
 
 function Layout({ children }) {
   return (
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/eventcalendar" element={<EventCalendar />} />
         <Route path="/blog/genbruise" element={<GenerationalBruise />} />
         <Route path="/dayone" element={<DayOne />} />
+        <Route path="/thatsmypo" element={<ThatsMyPoster />} />
       </Routes>
     </React.Fragment>
   );

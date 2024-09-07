@@ -319,6 +319,9 @@ export default function PageOneMobile() {
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onClick={() => {
+          navigate("/thatsmypo");
+        }}
       />
 
       {/* 1 */}
